@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Registration</title>
+</head>
+<body>
+
+     {% load static %}
+     <link rel="stylesheet" type="text/css" href="{% static profile_management/User_Profile.css}">
+
+
+     <h1>Registration</h1>
+
+     <a href="{% url 'home_page:home'%}">Home</a>
+     
+
+     {% if submitted %}
+
+     Your event was submitted
+
+     {% else %}
+
+          <form action="" method="post">
+
+          {% csrf_token %}
+
+          {{form.as_p}}
+
+          <button>Register</button>
+
+          </form>
+
+     {% endif %}
+
+</body>
+</html>

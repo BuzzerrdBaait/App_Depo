@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'home_page/home.css' %}">
+
+
+
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>APP DEPO</title>
+     
+</head>
+
+
+<body>
+
+     <h1>{{greeting}}</h1>
+
+
+
+<a href="{% url 'admin:index' %}">Administrators</a>
+<a href="{% url 'profile_management:register'%}">Registration</a>
+<a href="{% url 'profile_management:login'%}">Log In</a>
+<a href="{% url 'profile_management:User_Profile' %}">User Profile</a>
+<a href="{% url 'experimental_playground:x1' %}">Playground</a>
+      
+
+</body>
+</html>
+
+
+
