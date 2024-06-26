@@ -2,6 +2,7 @@
 <html lang="en">
 
 {% load static %}
+
 <link rel="stylesheet" type="text/css" href="{% static 'home_page/home.css' %}">
 
 
@@ -19,14 +20,17 @@
 
      <h1>{{greeting}}</h1>
 
+     <a href="{% url 'admin:index' %}">Administrators</a>
+     <a href="{% url 'profile_management:register'%}">Registration</a>
+     <a href="{% url 'profile_management:login'%}">Log In</a>
+     <a href="{% url 'profile_management:User_Profile' %}">User Profile</a>
+     <a href="{% url 'experimental_playground:x1' %}">Playground</a>
 
+     {% for img in misc_imgs %}
 
-<a href="{% url 'admin:index' %}">Administrators</a>
-<a href="{% url 'profile_management:register'%}">Registration</a>
-<a href="{% url 'profile_management:login'%}">Log In</a>
-<a href="{% url 'profile_management:User_Profile' %}">User Profile</a>
-<a href="{% url 'experimental_playground:x1' %}">Playground</a>
-      
+     <img src="{{img.image.url}}" alt="{{img.name}}">
+
+     {% endfor %}
 
 </body>
 </html>

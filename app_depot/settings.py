@@ -118,6 +118,11 @@ DB_USER= os.environ.get('DB_USER')
 DB_PASSWORD= os.environ.get('DB_PASSWORD')
 DB_Credentials=[SCHEMA_NAME,DB_USER,DB_PASSWORD]
 
+"""MEDIA  /   IMAGES    /    VIDEOS"""
+
+MEDIA_URL='/media/'
+MEDIA_ROOT= os.path.join(BASE_DIR,'media')
+
 """DONT FORGET TO TURN DEBUG TO FALSE IN PRODUCTION"""
 
 DEBUG = True

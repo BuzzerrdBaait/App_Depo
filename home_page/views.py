@@ -14,8 +14,18 @@ User = get_user_model()
 
 def home(request):
 
+     misc_imgs= misc_images.objects.all()
+
+     
+
+
      greeting="The daily message is: 'Love conquers all!'"
 
      return render(request, 'home.html',{
 
-          'greeting': greeting,})
+          'greeting': greeting,
+          'misc_imgs':misc_imgs,
+          })
+
+
+#<img src="{{ rocket.image.url}}" alt="rocket">
