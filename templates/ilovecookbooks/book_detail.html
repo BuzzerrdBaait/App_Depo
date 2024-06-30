@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'ilovecookbooks/css.css' %}">
+    <title>{{ book.title }} Details</title>
+</head>
+<body>
+
+    <style>
+
+        .detaillink{
+
+            padding-top: 30px;
+        }
+
+        .homelink{
+
+            background: linear-gradient(#D8D4BB, #8f8f8f);
+            width: fit-content;
+            padding:10px;
+
+            border-radius: 10px 10px 10px 10px; /* Rounded corners on top */
+        
+        }
+    </style>
+
+    <div class="carousel-container4">
+        <div class="flexbox-container3">
+
+            {% for page in book.pages.all %}
+
+            <div class="book-item">
+            
+                {% if page.page_photo %}
+            
+                <div class="page-image">
+            
+                    <img src="{{ page.page_photo.url }}" alt="Page {{ page.pk }}">
+            
+                </div>
+                
+
+                <div class="detaillink">
+            
+                <strong><a href="{% url 'ilovecookbooks:page_view' page.id book.id %}">Details</a></strong>
+
+                </div>
+            
+                {% else %}
+            
+                No image available<br>
+            
+                {% endif %}
+            
+            </div>
+            
+            {% endfor %}
+            
+            
+        </div>
+    </div>
+</div>
+
+<div class="homelink">
+<a href="{% url 'ilovecookbooks:Home' %}">Go Home</a>
+</div>
+
+</body>
+</html>

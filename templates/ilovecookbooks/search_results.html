@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<style>
+
+    .detaillink{
+
+    padding-top: 30px;
+    }
+
+    .homelink{
+
+        background: linear-gradient(rgb(123, 114, 56), #8f8f8f);
+
+        width: fit-content;
+        
+        padding:10px;
+
+        border-radius: 10px 10px 10px 10px; /* Rounded corners on top */
+
+        }
+
+</style>
+
+<head>
+
+    {% load static %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'ilovecookbooks/css.css' %}">
+
+
+</head>
+
+<body>
+
+    {% if search_results %}
+
+    <div class="carousel-container4">
+
+        <div class="flexbox-container3">
+
+            {% for page in search_results %}
+
+            <div class="book-item">
+
+                <strong>Book Title:</strong> {{ page.book.title }}<br>
+
+                <div class="page-image">
+
+                    <img src="{{ MEDIA_URL }}{{ page.page_photo.name }}" alt="{{ page.book.title }}">
+
+                </div>
+
+                <div class="detaillink">
+            
+                    <strong><a href="{% url 'ilovecookbooks:page_view' page.id page.book.id %}">Details</a></strong>
+    
+                </div>
+    
+
+            </div>
+
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+    {% else %}
+
+    <p>No results found.</p>
+
+    {% endif %}
+
+
+    <div class="homelink"><a href="{% url 'ilovecookbooks:Home' %}">Go Home</a></div>
+
+</body>
+
+</html>

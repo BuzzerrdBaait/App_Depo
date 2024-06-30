@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    {% load static %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'ilovecookbooks/css.css' %}">
+
+    <title>Page View</title>
+
+    <style>
+
+        body {
+
+            font-family: Arial, sans-serif;
+
+            background: linear-gradient(#646257, #2e2c2c, #646257);
+
+            text-align: center;
+
+        }
+
+        .page-container {
+
+            max-width: 80%;
+
+            margin: 0 auto;
+
+            background: linear-gradient(#D8D4BB, #8f8f8f);
+
+            border: 1px solid #ddd;
+
+            border-radius: 5px;
+
+            padding: 20px;
+
+        }
+
+        h1 {
+
+            color: #007bff;
+
+        }
+
+        .page-image img {
+
+            max-width: 100%;
+
+            height: auto;
+
+        }
+
+        p {
+
+            margin: 10px 0;
+
+        }
+
+        form {
+
+            text-align: left;
+
+        }
+
+        .page-image img {
+
+            max-width: 100%;
+
+            height: auto;
+
+        }
+
+        form {
+
+            text-align: left;
+
+            max-width: 300px;
+
+            margin: 0 auto;
+
+            padding: 20px;
+
+        }
+
+        button {
+
+            background-color: #007bff;
+
+            color: #fff;
+
+            border: none;
+
+            padding: 10px 20px;
+
+            border-radius: 5px;
+
+            cursor: pointer;
+
+        }
+
+        button:hover {
+
+            background-color: #0056b3;
+
+        }
+
+        a {
+
+            text-decoration: none;
+
+            color: #007bff;
+
+        }
+
+        a:hover {
+
+            text-decoration: underline;
+
+        }
+
+        
+        .homelink{
+
+        background: linear-gradient(#D8D4BB, #8f8f8f);
+        width: fit-content;
+        padding:10px;
+
+        border-radius: 10px 10px 10px 10px; /* Rounded corners on top */
+
+        text-align:center;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="page-container">
+
+        <h1>Page Details</h1>
+
+        <div class="page-image">
+
+            <img src="{{ MEDIA_URL }}{{ page.page_photo.name }}" alt="Page {{ page.pk }}">
+
+        </div>
+
+        <p><strong> {{page.page_photo.name}}</strong></p>
+
+        <p><strong>Page ID:</strong> {{ page.pk }}</p>
+
+        <p><strong>Keywords:</strong> {{ page.keywords }}</p>
+
+        <form method="post">
+
+            {% csrf_token %}
+
+            {{ form.as_p }}
+
+            <button type="submit">Save Page to User Book</button>
+
+        </form>
+
+        <div class="homelink"><a href="{% url 'ilovecookbooks:book_detail' book.pk %}">Back to Book-{{ book.title }}</a></div>
+
+
+    <div class="homelink"><a href="{% url 'ilovecookbooks:Home' %}">Go Home</a></div>
+
+</div>
+
+
+</body>
+
+</html>
+

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>Register</title>
+
+    <style>
+
+        body {
+
+            font-family: Arial, sans-serif;
+
+            background: linear-gradient(#646257, #2e2c2c, #646257);
+
+            text-align: center;
+
+            margin: 0;
+
+            padding: 0;
+
+        }
+
+        h1 {
+
+            color: #007bff;
+
+        }
+
+        form {
+
+            max-width: 40%;
+
+            margin: 0 auto;
+
+            padding: 20px;
+
+            background: linear-gradient(#D8D4BB, #8f8f8f);
+
+            border: 1px solid #ddd;
+
+            border-radius: 5px;
+
+            text-align: left;
+
+        }
+
+        label {
+
+            display: block;
+
+            margin-bottom: 10px;
+
+        }
+
+        input {
+
+            width: 95%;
+
+            padding: 10px;
+
+            margin-bottom: 20px;
+
+            border: 1px solid #ddd;
+
+            border-radius: 5px;
+
+        }
+
+        button {
+
+            background-color: #007bff;
+
+            color: #fff;
+
+            border: none;
+
+            padding: 10px 20px;
+
+            border-radius: 5px;
+
+            cursor: pointer;
+
+        }
+
+        button:hover {
+
+            background-color: #0056b3;
+
+        }
+
+        .flexbox-item {
+
+            display: flex;
+
+            justify-content: center;
+
+            margin-top: 10px;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Register</h1>
+
+    <div class="flexbox-item flexbox-item-5"><a href="{% url 'ilovecookbooks:login' %}">Already a user? Login</a></div>
+
+    <div class="flexbox-item flexbox-item-5"><a href="{% url 'ilovecookbooks:Home' %}">Go Home</a></div>
+
+    <br/><br/>
+
+
+
+    {% if submitted %}
+
+        Your event was submitted
+
+    {% else %}
+
+        <form action="" method="post">
+
+            {% csrf_token %}
+
+            {{form.as_p}}
+
+            <button>Register</button>
+
+        </form>
+
+    {% endif %}
+
+</body>
+
+</html>
+

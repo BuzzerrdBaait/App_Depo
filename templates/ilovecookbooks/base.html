@@ -1,0 +1,236 @@
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    {% load static %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'ilovecookbooks/css.css' %}">
+
+    <div id="header">
+
+        {% if user.is_authenticated %}
+         <h1>Welcome {{user.username}}</h1>
+        {% else %}
+            <h1>Welcome!</h1>
+        {% endif%}
+
+
+
+
+    </div>
+
+</head>
+
+<body>
+
+    <body onload="loadHeader()">
+
+        <div id="header"></div>
+
+    <div id="topbarbackcolor">
+
+    <div class="flexbox-container">
+
+        <div class="flexbox-item flexbox-item-1"><a href="{% url 'ilovecookbooks:foodblog' %}">Food Blog</a></div>
+
+        <div class="flexbox-item flexbox-item-2"><a href="{% url 'ilovecookbooks:links' %}">Book Links</a></div>
+
+
+        {% if user.is_authenticated %}
+
+        {% with user_profile=user.userprofile %}
+    
+            <div class="flexbox-item flexbox-item-2">
+    
+                <a href="{%url 'ilovecookbooks:user_profile' user.pk%}">Your Stuff</a>            
+    
+            </div>
+    
+        {% endwith %}
+    
+        {% else %}
+    
+            <div class="flexbox-item flexbox-item-2">
+        
+                <a href="{% url 'profile_management:login' %}">Login/Register</a>
+        
+            </div>
+        
+        {% endif %}
+    
+    
+
+        <form id="search-form" action="{% url 'ilovecookbooks:search_results' %}" method="get">
+
+            <input class="flexbox-item-entrybox" type="text" name="search_term" autocomplete="off" autofocus="true">
+
+        </form>
+
+        <form id="search-button" action="{% url 'ilovecookbooks:search_results' %}" method="get">
+
+            <button class="flexbox-item-button" type="submit">Search</button>
+
+        </form>
+
+    </div>
+
+
+
+    <div class="titlelabel">
+
+    <h3>Recently Uploaded</h3>
+
+    </div>
+
+
+
+    <div class="carousel-container4">
+
+        <div class="flexbox-container3">
+
+            {% for book in recent %}
+
+                <div class="book-item">
+
+                    <strong>Title:</strong> {{ book.title }}<br>
+
+                    <strong>Year:</strong> {{ book.year }}<br>
+
+                    {% if book.cover_photo %}
+
+                        <div class="book-image">
+
+                            <!-- Use a local path for the image source -->
+
+                            <img src="{{ book.cover_photo.url }}" alt="Page {{ page.pk }}">  
+
+                        </div>
+
+                    {% else %}
+
+                        No image available<br>
+
+                    {% endif %}
+
+                    <a href="{% url 'ilovecookbooks:book_detail' pk=book.pk %}">View Details</a>
+
+                </div>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+
+
+    <div class="titlelabel">
+
+        <h3>All Books</h3>
+
+    </div>
+
+    
+
+    <div class="carousel-container4">
+
+        <div class="flexbox-container3">
+
+            {% for book in all %}
+
+                <div class="book-item">
+
+                    <strong>Title:</strong> {{ book.title }}<br>
+
+                    <strong>Year:</strong> {{ book.year }}<br>
+
+                    {% if book.cover_photo %}
+
+                        <div class="book-image">
+
+                            <img src="{{ book.cover_photo.url }}" alt="Page {{ page.pk }}">  
+
+                        </div>
+
+                    {% else %}
+
+                        No image available<br>
+
+                    {% endif %}
+
+                    <a href="{% url 'ilovecookbooks:book_detail' pk=book.pk %}">View Details</a>
+
+                    
+
+                </div>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+</body>
+
+
+
+
+<script>
+
+    document.addEventListener('DOMContentLoaded', function() {
+    
+    
+    
+        var searchForm = document.getElementById('search-form');
+    
+        var searchInput = searchForm.querySelector('[name="search_term"]');
+    
+        var searchButton = document.getElementById('search-button');
+    
+    
+        searchForm.addEventListener('submit', function(event) {
+    
+            event.preventDefault(); // Prevent the form from submitting normally
+    
+            
+    
+            var searchTerm = searchInput.value.toLowerCase(); // Convert input to lowercase
+    
+            
+    
+            if (searchTerm.trim() !== '') {
+    
+                window.location.href = "{% url 'ilovecookbooks:search_results' %}?search_term=" + encodeURIComponent(searchTerm);
+    
+            }
+    
+        });
+    
+        searchButton.addEventListener('click', function(event) {
+    
+            event.preventDefault(); // Prevent the button from performing its default action
+    
+            searchForm.dispatchEvent(new Event('submit')); // Trigger the form submit event
+    
+        });
+    
+    });
+    
+    </script>
+
+
+
+
+<body onload="loadHeader()">
+    <div id="header"></div>
+  
+    <script>
+      function loadHeader() {
+        // No need to do anything here, the animation starts automatically
+      }
+    </script>
+

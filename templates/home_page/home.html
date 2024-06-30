@@ -1,39 +1,70 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
+
 
 {% load static %}
 
-<link rel="stylesheet" type="text/css" href="{% static 'home_page/home.css' %}">
 
+
+<link rel="stylesheet" type="text/css" href="{% static 'base_css/base_output.css' %}">
 
 
 
 <head>
-     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>APP DEPO</title>
-     
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>APP DEPO</title>
+
 </head>
 
 
-<body>
 
-     <h1>{{greeting}}</h1>
+<body class="bg-gray-100">
 
-     <a href="{% url 'admin:index' %}">Administrators</a>
-     <a href="{% url 'profile_management:register'%}">Registration</a>
-     <a href="{% url 'profile_management:login'%}">Log In</a>
-     <a href="{% url 'profile_management:User_Profile' %}">User Profile</a>
-     <a href="{% url 'experimental_playground:x1' %}">Playground</a>
 
-     {% for img in misc_imgs %}
 
-     <img src="{{img.image.url}}" alt="{{img.name}}">
+    <div class="container mx-auto p-4">
 
-     {% endfor %}
+        <h1 class="text-3xl font-bold mb-4">{{greeting}}</h1>
+
+
+
+        <div class="flex space-x-4 mb-4">
+
+            <a href="{% url 'admin:index' %}" class="text-blue-500 hover:text-blue-700">Administrators</a>
+
+            <a href="{% url 'profile_management:register'%}" class="text-blue-500 hover:text-blue-700">Registration</a>
+
+            <a href="{% url 'profile_management:login'%}" class="text-blue-500 hover:text-blue-700">Log In</a>
+
+            <a href="{% url 'profile_management:User_Profile' %}" class="text-blue-500 hover:text-blue-700">User Profile</a>
+
+            <a href="{% url 'experimental_playground:x1' %}" class="text-blue-500 hover:text-blue-700">Playground</a>
+
+        </div>
+
+
+
+        <div class="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4">
+
+            {% for img in misc_imgs %}
+
+            <img src="{{img.image.url}}" alt="{{img.name}}" class="mb-4 w-full rounded-lg shadow-lg">
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+
 
 </body>
+
 </html>
-
-
 

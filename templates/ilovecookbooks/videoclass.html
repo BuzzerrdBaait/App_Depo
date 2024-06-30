@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <div class="videotitles4">
+    <title>Post Details</title>
+   
+    <h1>{{ post.title }}</h1>
+    <small> By: {{ post.author}}</small><br>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'ilovecookbooks/css.css' %}">
+</div>
+    
+</head>
+<body>
+
+<div class="videotitles5">
+<div class="viewer">
+<video class="viewer" controls>
+    <source src="{{ post.video_file.url }}" type="video/mp4">
+    Your browser does not support the video tag.
+</video>
+</div>
+<div class="videotitles6">
+    <div class="postbody">
+<p>{{ post.body }}</p>
+</div>
+</div>
+<p>Date: {{ post.date }}</p>
+<div><a href="{% url 'ilovecookbooks:base' %}">Home</a></div>
+<div class="videotitles5">
+
+
+
+</div>
+</div>
+
+
+</body>
+</html>
+
+
+
+
+
