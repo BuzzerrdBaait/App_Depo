@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    {%load static%}
+
+    <title>User Profile</title>
+
+    <link rel="stylesheet" type="text/css" href="{% static 'ilovecookbooks/css.css' %}">
+
+    <style>
+
+
+
+
+        .flexbox-container {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            background: linear-gradient(#ffdd0000 73%, #D8D4BB 27%);
+
+
+        }
+
+
+
+        .flexbox-item {
+
+            margin: 0;
+
+        }
+
+
+
+        .change-photo-link,
+
+        .logout-button,
+
+        .home-link {
+
+            margin-left: 10px;
+
+        }
+
+
+
+        .profile-container {
+
+            width: 100%;
+
+            margin: 0 auto;
+
+            background: linear-gradient(#D8D4BB, #8f8f8f);
+
+            border: 1px solid #ddd;
+
+            border-radius: 5px;
+
+            display: flex;
+
+            flex-direction: row;
+
+            align-items: flex-start;
+
+            justify-content: space-between;
+
+            padding: 20px;
+
+        }
+
+
+
+        .user-info {
+
+            text-align: left;
+
+        }
+
+
+
+        .user-pic {
+
+            width:25%;
+
+            max-width: 65%;
+
+            height: auto;
+
+        }
+
+
+
+        .user-pic img {
+
+            height: 30%;
+
+        }
+
+
+
+        .user-books {
+
+            flex: 1;
+
+            padding-left: 15%;
+
+            padding-top: 10%;
+
+            text-align: left;
+
+        }
+
+
+
+        .books-list {
+
+            list-style: none;
+
+            padding: 0;
+
+            text-align: left;
+
+        }
+
+
+
+        .books-list li {
+
+            margin: 10px 0;
+
+        }
+
+
+
+        .form-container {
+
+            display: grid;
+
+            grid-template-columns: 1fr 1.5fr;
+
+            align-items: left;
+
+            position: sticky;
+            
+
+        }
+
+
+
+        .create-book-form,
+
+        .delete-book-form {
+
+            margin: 20px 0;
+
+        }
+
+
+
+        .button {
+
+            background-color: #007bff;
+
+            color: #fff;
+
+            border: none;
+
+            padding: 10px 20px;
+
+            border-radius: 5px;
+
+            cursor: pointer;
+
+        }
+
+        .button2 {
+
+            background-color: #007bff00;
+
+            color: #007bff;
+
+            font-size: large;
+            font-weight: bold;
+
+
+            border: none;
+
+            padding: 10px 20px;
+
+            border-radius: 5px;
+
+            cursor: pointer;
+
+            }
+
+
+
+        .button:hover {
+
+            background-color: #0056b3;
+
+        }
+
+
+
+        a {
+
+            text-decoration: none;
+
+            color: #007bff;
+
+        }
+
+
+
+        a:hover {
+
+            text-decoration: underline;
+
+        }
+
+    </style>
+
+
+
+<form method="post" action="{% url 'logout' %}">
+
+</head>
+
+<body>
+
+    <div class="flexbox-container">
+
+        <div class="flexbox-item flexbox-item-2">
+
+            <a href="{% url 'ilovecookbooks:links' %}">Book Links</a>
+
+        </div>
+
+
+
+        {% if user == request.user %}
+
+            <div class="flexbox-item flexbox-item-2">
+
+                <a class="change-photo-link" href="{% url 'ilovecookbooks:default_profile_images' user.pk %}">Change Photo</a>
+
+            </div>
+
+        {% endif %}
+
+
+
+        <div class="flexbox-item flexbox-item-2">
+
+            <a href="{% url 'ilovecookbooks:Home' %}" class="home-link">Go Home</a>
+
+        </div>
+
+
+
+        <div class="flexbox-item flexbox-item-2">
+
+            <form method="post" action="{% url 'logout' %}">
+
+                {% csrf_token %}
+
+                <button class="button2 logout-button" type="submit">Logout</button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="profile-container">
+
+        <div class="user-info">
+
+            <h1>User Profile</h1>
+
+            <p><strong>Username:</strong> {{ user.username }}</p>
+
+
+
+            <div class="user-pic">
+
+                <img src="{{ user_profile.user_pic.url }}" alt="User Profile Pic">
+
+            </div>
+
+        </div>
+
+
+
+
+
+        <div class="form-container">
+
+            <div class="create-book-form">
+
+                <h2>Create a New User Book:</h2>
+
+                <form method="post">
+
+                    {% csrf_token %}
+
+                    {{ create_form.as_p }}
+
+                    <button class="button" type="submit" name="create_book">Create User Book</button>
+
+                </form>
+
+            </div>
+
+
+
+            <div class="delete-book-form">
+
+                <h2>Delete User Book:</h2>
+
+                <form method="post">
+
+                    {% csrf_token %}
+
+                    {{ delete_form.as_p }}
+
+                    <button class="button" type="submit" name="delete_book">Delete User Book</button>
+
+                </form>
+
+            </div>
+
+            <div class="user-books">
+
+                <h2>User's Books:</h2>
+    
+                <ul class="books-list">
+    
+                    {% for user_book in user_books %}
+    
+                        <li>
+    
+                            <a href="{% url 'ilovecookbooks:user_book_pages' user_book_id=user_book.id %}">{{ user_book.title }}</a>
+    
+                        </li>
+    
+                    {% endfor %}
+    
+                </ul>
+    
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+

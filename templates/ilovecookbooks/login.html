@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+
+
+
+<html>
+
+
+
+<head>
+
+
+
+    <title>Login</title>
+
+
+
+    <style>
+
+
+
+        body {
+
+            font-family: Arial, sans-serif;
+
+            background: linear-gradient(#646257, #2e2c2c, #646257);
+
+            text-align: center;
+
+            margin: 0;
+
+            padding: 0;
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+            justify-content: center;
+
+            height: 100vh;
+
+
+        }
+
+
+
+        h2 {
+
+            color: #007bff;
+
+        }
+
+
+
+        .flexbox-container {
+
+            display: flex;
+
+            flex-direction: column;
+
+            align-items: center;
+
+
+
+            width: 78.4%;
+            background: linear-gradient(#ffdd0000 25%, #D8D4BB 75%);
+
+            
+
+
+
+            margin-top: 20px;
+
+            border-top-left-radius: 10px;
+
+            border-top-right-radius: 10px;
+
+            overflow: hidden;
+
+        }
+
+
+
+        .flexbox-item {
+
+            margin: 0;
+
+            padding: 10px;
+
+            background: linear-gradient(#bab7a2 15%, #D8D4BB 75%);
+
+            
+
+            border-radius: 10px 10px 0px 0px;
+
+            width: 50%;
+
+            box-sizing: border-box;
+
+        }
+
+
+
+        .flexbox-item a {
+
+            color: #000; /* Adjust link color as needed */
+
+            text-decoration: none;
+
+        }
+
+
+
+        form {
+
+            width: 75%;
+
+            margin: 0 auto;
+
+            color:#007bff;
+
+            padding: 20px;
+            
+
+            background: linear-gradient(#D8D4BB, #8f8f8f);
+
+            border: 1px solid #ddd;
+
+            border-radius: 0 0 10px 10px;
+
+            text-align: left;
+
+        }
+
+        .formpos{
+
+            margin-left: 10%;
+
+
+        }
+
+
+
+        label {
+
+            display: block;
+
+            margin-bottom: 10px;
+
+
+        }
+
+
+
+
+        input[type="text"],
+
+        input[type="password"] {
+
+
+            width: 80%;
+    
+
+
+            padding: 10px;
+
+            margin-bottom: 10px;
+
+            border: 1px solid #ddd;
+
+            border-radius: 5px;
+
+        }
+
+
+
+        button {
+
+            background-color: #007bff;
+
+            color: #fff;
+
+            border: none;
+
+            padding: 10px 20px;
+
+            border-radius: 5px;
+
+            cursor: pointer;
+
+        }
+
+
+
+        button:hover {
+
+            background-color: #0056b3;
+
+        }
+
+
+
+    </style>
+
+
+
+</head>
+
+
+
+<body>
+
+
+
+    {% load static %}
+
+
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css.css' %}">
+
+
+
+    <h2>Login</h2>
+
+
+
+    <div class="flexbox-container">
+
+
+
+        <div class="flexbox-item">
+
+            <a href="{% url 'ilovecookbooks:registration' %}">Need to register?</a>
+
+
+
+        </div>
+
+
+
+        <div class="flexbox-item">
+
+            <a href="{% url 'ilovecookbooks:links' %}">Book Links</a>
+
+        </div>
+
+
+
+        <div class="flexbox-item">
+
+            <a href="{% url 'ilovecookbooks:Home' %}">Home</a>
+
+        </div>
+
+
+
+        <div class="flexbox-item">
+
+            <a href="{% url 'password_reset'%}">Reset Password?</a>
+
+        </div>
+
+
+
+    </div>
+
+
+
+
+
+    <form method="post">
+
+        {% csrf_token %}
+
+        <div class="formpos">
+
+        <label for="username">Username:</label>
+
+        <input type="text" id="username" name="username" required><br>
+
+        <label for="password">Password:</label>
+
+        <input type="password" id="password" name="password" required><br>
+
+        <button type="submit">Login</button>
+
+        </div>
+
+    </form>
+
+
+
+</body>
+
+
+
+</html>
+

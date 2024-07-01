@@ -1,0 +1,46 @@
+<div class="titlelabel">
+
+<h1>Videos</h1>
+
+</div>
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'ILOVECOOKBOOKS/css.css' %}">
+
+{% for post in object_list %}
+<div class="column2">
+    <div class="object">
+
+        <div class="videotitle">
+            Author: {{post.author}}<br/>
+    
+        </div>
+        <div class="videotitles2">
+            {{post.title}} <br>
+    
+        </div>
+        <div class="videotitles3">
+    {{post.body}}
+    </div>
+    <div class="thumbnail">
+    <img src="{{ post.thumbnail.url }}" alt="{{ post.title }}">
+    </div>
+    <a href="{% url 'ilovecookbooks:details' post.pk %}">view video</a>
+</div>
+
+</div>
+
+{% endfor %}
+
+<div class="homebutton">
+    <a href="{% url 'ilovecookbooks:base' %}">Home</a>
+</div>
+
+
+
+
+
+
+
+
+
+

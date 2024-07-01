@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    {% load static %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'ilovecookbooks/css.css' %}">
+
+    <!-- Add your HTML head content here -->
+
+</head>
+
+<body>
+
+    <h1>User Book Pages</h1>
+
+    <div class="carousel-container4">
+
+        <div class="flexbox-container3">
+
+            {% for user_book_page in user_book_pages %}
+
+                <div class="book-item">
+
+                    Page {{ user_book_page.order }}:
+
+                    {% if user_book_page.book_page.page_photo %}
+
+                        <div class="page-image">
+
+                            <img src="{{ user_book_page.book_page.page_photo.url}}" alt="Page {{ user_book_page.book_page.pk }}">
+
+                            
+
+                            <!-- Display the delete form only if the current user is the owner -->
+
+                            {% if user_book.user == request.user %}
+
+                                <form method="post" action="">
+
+                                    {% csrf_token %}
+
+                                    <input type="hidden" name="user_book_page_id" value="{{ user_book_page.id }}">
+
+                                    <button type="submit">Delete Page</button>
+
+                                </form>
+
+                            {% endif %}
+
+                        </div>
+
+                    {% else %}
+
+                        No image available
+
+                    {% endif %}
+
+                </div>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+    <a href="{% url 'ilovecookbooks:base' %}">Go Home</a>
+
+</body>
+
+</html>
