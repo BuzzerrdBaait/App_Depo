@@ -21,7 +21,7 @@
 <img src="https://github.com/BuzzerrdBaait/App_Depo/assets/108156235/c6473dcc-4f8a-46c7-bc79-35d7c5bda271" alt="Not Found">
 <img src="https://github.com/BuzzerrdBaait/App_Depo/assets/108156235/4d807850-1383-40a7-b11b-9de3e75932bc" alt="Not Found">
 
-'''
+'''sh
 git clone https://github.com/BuzzerrdBaait/App_Depo/
 '''
 
