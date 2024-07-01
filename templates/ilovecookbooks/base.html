@@ -92,6 +92,8 @@
 
         <div class="flexbox-container3">
 
+            {% if book in recent%}
+
             {% for book in recent %}
 
                 <div class="book-item">
@@ -122,6 +124,8 @@
 
             {% endfor %}
 
+            {%endif%}
+
         </div>
 
     </div>
@@ -139,6 +143,7 @@
     <div class="carousel-container4">
 
         <div class="flexbox-container3">
+            {% if book in all %}
 
             {% for book in all %}
 
@@ -162,13 +167,15 @@
 
                     {% endif %}
 
-                    <a href="{% url 'ilovecookbooks:book_detail' pk=book.pk %}">View Details</a>
+                    <a href="{% url 'ilovecookbooks:book_detail' pk=book.pk %}" alt="Not Found">View Details</a>
 
                     
 
                 </div>
 
             {% endfor %}
+
+            {% endif %}
 
         </div>
 
