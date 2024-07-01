@@ -52,11 +52,17 @@
 
         <div class="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4">
 
+            {% if img %}
+
             {% for img in misc_imgs %}
 
             <img src="{{img.image.url}}" alt="{{img.name}}" class="mb-4 w-full rounded-lg shadow-lg">
 
             {% endfor %}
+
+            {% endif %}
+
+
 
         </div>
 
