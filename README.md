@@ -12,6 +12,10 @@
 <li>Add flashcardzz app from flashcardzz.com</li>
 <li>Continue building features onto ilovecookbooks and flashcardzz</li>
 
+<h3>Below are two of the apps I will be adding, but I don't mind helping on other peoples apps as well.</h3>
+
+<p1>I want to gather a large repository of example apps which can be used to build other projects and display aspiring developers work.</p1>
+
 <h3>Screenshots of flashcardzz.com</h3>
 <img src="https://github.com/BuzzerrdBaait/App_Depo/assets/108156235/2b385c91-a100-49a5-8f79-7018eda095c9" alt="Not Found" width=90%>
 <img src="https://github.com/BuzzerrdBaait/App_Depo/assets/108156235/217f6619-64fc-414c-ae9a-bc7cb085f697" alt="Not Found" width=90%>
