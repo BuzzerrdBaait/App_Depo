@@ -21,15 +21,16 @@
 <img src="https://github.com/BuzzerrdBaait/App_Depo/assets/108156235/c6473dcc-4f8a-46c7-bc79-35d7c5bda271" alt="Not Found" width=90%>
 <img src="https://github.com/BuzzerrdBaait/App_Depo/assets/108156235/4d807850-1383-40a7-b11b-9de3e75932bc" alt="Not Found" width=90%>
 
-<h3>Getting started</h3>
+<h1>Getting started</h1>
 
-<p1>What you will need</p1>
+<h3>What you will need</h3>
   <li>pip installed</li>
   <li>git installed</li>
   <li>python</li>
-  <li>mysql or choose your own database</li>
+  <li>mysql workbench or choose your own database</li>
 <br></br>
 
+<h1>By the steps..:</h1>
 
 <br></br>
 <p1>_.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-.</p1>
@@ -63,7 +64,7 @@ python -m venv App_Depo
 
 
 
-<p1> 2. cd into your virtual environment and activate it.</p1>
+<p1> 2. cd into your virtual environment's scripts folder and activate 'activate.bat.</p1>
 
 
 ```sh
