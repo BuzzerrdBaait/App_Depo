@@ -37,13 +37,14 @@
 cd desktop
 ```
 
-<p2>Create your virtual environment, this takes a few seconds.</p2>
+1. Create your virtual environment, this takes a few seconds.
 ```sh
 python -m venv App_Depo
 ```
-<p2>cd into your new app</p2>
+2. cd into your new app
 
 ```sh
 cd App_Depo
 ```
+
 git clone https://github.com/BuzzerrdBaait/App_Depo/
