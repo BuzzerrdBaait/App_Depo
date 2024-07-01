@@ -24,8 +24,8 @@
 <h1>Getting started</h1>
 
 <h3>What you will need</h3>
-  <li>pip installed</li>
-  <li>git installed</li>
+  <li>pip installed. Newer versions of python come with it. </li>
+  <li>git hub CLI installed: <a href="https://www.codecademy.com/article/the-github-cli-command-line-interface">Geeks for Geeks</a></li>
   <li>python</li>
   <li>mysql workbench or choose your own database</li>
 <br></br>
