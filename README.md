@@ -33,7 +33,7 @@
 <li>1. First thing, create your virtual environment</li>
 <li>2. cd into your virtual environment's scripts folder and activate 'activate.bat.</li>
 <li>3. Clone the repository</li>
-<li>4. cd into the new app and install requirements.txt<li>
+<li>4. cd into the new app and install requirements.txt</li>
 <li>5. Create your secret key. Store it in the system environment variables</li>
 <li>6. Open 'cmd' line and migrate</li>
 <li>7. Run py manage.py runserver</li>
@@ -41,12 +41,12 @@
 
 <h1>By the steps..:</h1>
 
-<br></br>
 <p1>_.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-.</p1>
+
 <br></br>
 
 <p1> 1. First thing, create your virtual environment</p1>
-<br></br>
+
 <p2>Open cmd line and cd into the directory you would like to store your virtual environment</p2>
 
 ```sh
