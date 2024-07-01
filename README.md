@@ -21,6 +21,76 @@
 <img src="https://github.com/BuzzerrdBaait/App_Depo/assets/108156235/c6473dcc-4f8a-46c7-bc79-35d7c5bda271" alt="Not Found">
 <img src="https://github.com/BuzzerrdBaait/App_Depo/assets/108156235/4d807850-1383-40a7-b11b-9de3e75932bc" alt="Not Found">
 
+OCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Command Line Code Box</title>
+
+    <style>
+
+        .cmd-box {
+
+            background-color: #1e1e1e;
+
+            color: #c5c5c5;
+
+            font-family: Consolas, monospace;
+
+            padding: 10px;
+
+            border-radius: 5px;
+
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
+            overflow-x: auto;
+
+        }
+
+        .cmd-box::before {
+
+            content: "$ ";
+
+            color: #6a9955;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="cmd-box">
+
+        <pre><code>git clone https://github.com/username/repository.git
+
+cd repository
+
+git checkout -b new-branch-name
+
+git add .
+
+git commit -m "Your commit message"
+
+git push origin new-branch-name
+
+</code></pre>
+
+    </div>
+
+</body>
+
+</html>
+
+
+
 
 
 
