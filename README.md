@@ -44,7 +44,7 @@ python -m venv App_Depo
 
 <p2>this creates your folder that looks like this</p2>
 
-<img src="https://github.com/BuzzerrdBaait/App_Depo/assets/108156235/4e1a70bd-4dd0-499e-9a18-2c62c8e9021b" alt="not found" width=50% anchor="center">
+<img src="https://github.com/BuzzerrdBaait/App_Depo/assets/108156235/4e1a70bd-4dd0-499e-9a18-2c62c8e9021b" alt="not found" width=95%>
 
 <p2> cd into your new app</p2>
 
