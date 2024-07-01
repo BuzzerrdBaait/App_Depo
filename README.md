@@ -29,14 +29,21 @@
   <li>python</li>
   <li>mysql workbench or choose your own database</li>
 <br></br>
+<h3>Installation can be summed up like this</h3>
+<p1>1. First thing, create your virtual environment</p1>
+<p1>2. cd into your virtual environment's scripts folder and activate 'activate.bat.</p1>
+<p1>3. Clone the repository</p1>
+<p1>4. cd into the new app and install requirements.txt<p1>
+<p1>5. Create your secret key. Store it in the system environment variables</p1>
+<p1>6. Open 'cmd' line and migrate</p1>
+<p1>7. Run py manage.py runserver</p1>
+
 
 <h1>By the steps..:</h1>
 
 <br></br>
 <p1>_.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-.</p1>
-<p1>_.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-.</p1>
 <br></br>
-
 
 <p1> 1. First thing, create your virtual environment</p1>
 <br></br>
@@ -59,10 +66,6 @@ python -m venv App_Depo
 
 <br></br>
 <p1>_.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-.</p1>
-<p1>_.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-.</p1>
-<br></br>
-
-
 
 <p1> 2. cd into your virtual environment's scripts folder and activate 'activate.bat.</p1>
 
@@ -104,7 +107,6 @@ git clone https://github.com/BuzzerrdBaait/App_Depo/
 <p1>_.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-.</p1>
 <br></br>
 
-
 <p1>4. cd into the new app and install requirements.txt<p1>
 
 
@@ -129,7 +131,6 @@ pip install -r requirements.txt
 <p1>_.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-.</p1>
 <p1>_.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-.</p1>
 <br></br>
-
 
 <p1>5. Create your secret key. Store it in the system environment variables</p1>
 
@@ -160,6 +161,7 @@ pip install -r requirements.txt
 <p1>_.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-.</p1>
 <p1>_.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-.</p1>
 <br></br>
+
 
 <p1>6. Open 'cmd' line and migrate</p1>
 
