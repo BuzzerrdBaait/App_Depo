@@ -18,7 +18,7 @@
 <img src="https://github.com/BuzzerrdBaait/App_Depo/assets/108156235/d0d1ecf0-e3ee-4815-9e11-1f0773d3482b" alt="Not Found">
 <h3>Screenshots of ilovecookbooks</h3>
 <img src="https://github.com/BuzzerrdBaait/App_Depo/assets/108156235/18b3a022-6c34-456f-8943-e8c13e66ca55" alt="Not Found">
-<img src="https://github.com/BuzzerrdBaait/App_Depo/assets/108156235/c6473dcc-4f8a-46c7-bc79-35d7c5bda271" alt="Not Found"
+<img src="https://github.com/BuzzerrdBaait/App_Depo/assets/108156235/c6473dcc-4f8a-46c7-bc79-35d7c5bda271" alt="Not Found">
 <img src="https://github.com/BuzzerrdBaait/App_Depo/assets/108156235/4d807850-1383-40a7-b11b-9de3e75932bc" alt="Not Found">
 
 
