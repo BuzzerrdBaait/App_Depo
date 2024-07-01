@@ -25,7 +25,7 @@
 ![image](https://github.com/BuzzerrdBaait/App_Depo/assets/108156235/18b3a022-6c34-456f-8943-e8c13e66ca55)
 
 
-<img src="https://d17usxoyp786nd.cloudfront.net/book_pages/Pecan_Cookery_2.png" alt="not found">
+<img src="https://github.com/BuzzerrdBaait/App_Depo/assets/108156235/18b3a022-6c34-456f-8943-e8c13e66ca55" alt="notfound">
 
 
 
