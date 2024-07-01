@@ -55,11 +55,9 @@ cd App_Depo
 ```sh
 cd scripts
 ```
-|   |   |   |   |   |
-|---|---|---|---|---|
-| ```sh
-activate.bat
-```  |   |   |   |   |
+| cmd line  |powershell.ps1| 
+|-----------|--------------|
+| activate.bat|./activate.bat|
 
 <p2> Activate your virtual environment.</p2>
 
