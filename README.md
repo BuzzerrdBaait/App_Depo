@@ -13,13 +13,13 @@
 <li>Continue building features onto ilovecookbooks and flashcardzz</li>
 
 <h3>Screenshots of flashcardzz.com</h3>
-<img src="https://github.com/BuzzerrdBaait/App_Depo/assets/108156235/2b385c91-a100-49a5-8f79-7018eda095c9" alt="Not Found" width=65%>
-<img src="https://github.com/BuzzerrdBaait/App_Depo/assets/108156235/217f6619-64fc-414c-ae9a-bc7cb085f697" alt="Not Found" width=65%>
-<img src="https://github.com/BuzzerrdBaait/App_Depo/assets/108156235/d0d1ecf0-e3ee-4815-9e11-1f0773d3482b" alt="Not Found" width=65%>
+<img src="https://github.com/BuzzerrdBaait/App_Depo/assets/108156235/2b385c91-a100-49a5-8f79-7018eda095c9" alt="Not Found" width=90%>
+<img src="https://github.com/BuzzerrdBaait/App_Depo/assets/108156235/217f6619-64fc-414c-ae9a-bc7cb085f697" alt="Not Found" width=90%>
+<img src="https://github.com/BuzzerrdBaait/App_Depo/assets/108156235/d0d1ecf0-e3ee-4815-9e11-1f0773d3482b" alt="Not Found" width=90%>
 <h3>Screenshots of ilovecookbooks</h3>
-<img src="https://github.com/BuzzerrdBaait/App_Depo/assets/108156235/18b3a022-6c34-456f-8943-e8c13e66ca55" alt="Not Found" width=65%>
-<img src="https://github.com/BuzzerrdBaait/App_Depo/assets/108156235/c6473dcc-4f8a-46c7-bc79-35d7c5bda271" alt="Not Found">
-<img src="https://github.com/BuzzerrdBaait/App_Depo/assets/108156235/4d807850-1383-40a7-b11b-9de3e75932bc" alt="Not Found" width=65%>
+<img src="https://github.com/BuzzerrdBaait/App_Depo/assets/108156235/18b3a022-6c34-456f-8943-e8c13e66ca55" alt="Not Found" width=90%>
+<img src="https://github.com/BuzzerrdBaait/App_Depo/assets/108156235/c6473dcc-4f8a-46c7-bc79-35d7c5bda271" alt="Not Found" width=90%>
+<img src="https://github.com/BuzzerrdBaait/App_Depo/assets/108156235/4d807850-1383-40a7-b11b-9de3e75932bc" alt="Not Found" width=90%>
 
 <h3>Getting started</h3>
 
@@ -32,6 +32,7 @@
 
 
 <br></br>
+<p1>_.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-.</p1>
 <p1>_.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-.</p1>
 <br></br>
 
@@ -56,6 +57,7 @@ python -m venv App_Depo
 
 
 <br></br>
+<p1>_.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-.</p1>
 <p1>_.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-.</p1>
 <br></br>
 
@@ -85,6 +87,7 @@ activate.bat
 
 <br></br>
 <p1>_.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-.</p1>
+<p1>_.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-.</p1>
 <br></br>
 
 <p1>3. Clone the repository</p1>
@@ -97,6 +100,7 @@ git clone https://github.com/BuzzerrdBaait/App_Depo/
 
 <br></br>
 <p1>_.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-.</p1>
+<p1>_.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-.</p1>
 <br></br>
 
 
@@ -105,6 +109,7 @@ git clone https://github.com/BuzzerrdBaait/App_Depo/
 
 
 <br></br>
+<p1>_.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-.</p1>
 <p1>_.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-.</p1>
 <br></br>
 
@@ -119,9 +124,8 @@ cd App_Depo
 pip install -r requirements.txt
 ```
 
-
-
 <br></br>
+<p1>_.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-.</p1>
 <p1>_.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-.</p1>
 <br></br>
 
@@ -131,29 +135,31 @@ pip install -r requirements.txt
 <p2>Open the system search and type "Edit system environment variables"</p2>
 
 <br></br>
-<img src="https://github.com/BuzzerrdBaait/App_Depo/assets/108156235/fe64c3cc-4dd6-444b-b5fb-02712bdfb2d3)" alt="Not found" width=65%> 
+<img src="https://github.com/BuzzerrdBaait/App_Depo/assets/108156235/fe64c3cc-4dd6-444b-b5fb-02712bdfb2d3)" alt="Not found"> 
 
 <p2>Click 'Environment Variables'</p2>
 
-<img src="https://github.com/BuzzerrdBaait/App_Depo/assets/108156235/cba593bd-7bf3-40ea-9c0a-06535e1cc33a" alt="Not found" width=65%>
+<img src="https://github.com/BuzzerrdBaait/App_Depo/assets/108156235/cba593bd-7bf3-40ea-9c0a-06535e1cc33a" alt="Not found">
 
 <p2>click 'New'</p2>
 
-<img src="https://github.com/BuzzerrdBaait/App_Depo/assets/108156235/e09d55fe-315a-43e9-b42b-f8a5a4087677" alt="Not found" width=65%>
+<img src="https://github.com/BuzzerrdBaait/App_Depo/assets/108156235/e09d55fe-315a-43e9-b42b-f8a5a4087677" alt="Not found">
 
 <p2>Create your new variable like this.</p2>
 
 <p3> DJANGO_SECRET can be any random string, just make sure it is like 20 characters long for good practices. <p3>
 
-<img src="https://github.com/BuzzerrdBaait/App_Depo/assets/108156235/c4636ed2-276e-4de3-8c23-e8cb97578373" alt="not found" width=65%>
+<img src="https://github.com/BuzzerrdBaait/App_Depo/assets/108156235/c4636ed2-276e-4de3-8c23-e8cb97578373" alt="not found">
 
 <p2>Press 'Ok' to save the new variable</p2>
 
-<img src="https://github.com/BuzzerrdBaait/App_Depo/assets/108156235/3bc96557-a53b-42ef-971f-cd1d87cfc3c5" alt="not found" width=65%>
+<img src="https://github.com/BuzzerrdBaait/App_Depo/assets/108156235/3bc96557-a53b-42ef-971f-cd1d87cfc3c5" alt="not found">
 
 <br></br>
 <p1>_.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-.</p1>
+<p1>_.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-.</p1>
 <br></br>
+
 <p1>6. Open 'cmd' line and migrate</p1>
 
 <p2>if you are not in the directory containing manage.py, cd into your project's root directory</p2>
@@ -162,6 +168,14 @@ pip install -r requirements.txt
 ```sh
 py manage.py migrate
 ```
+
+
+<br></br>
+<p1>_.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-.</p1>
+<p1>_.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-.</p1>
+<br></br>
+
+
 
 <p1>7. You should be ready to runserver now</p1>
 
