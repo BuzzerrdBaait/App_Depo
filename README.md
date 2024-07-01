@@ -89,12 +89,12 @@ pip install -r requirements.txt
 <p2>Open the system search and type "Edit system environment variables"</p2>
 
 <br></br>
-<img src="https://github.com/BuzzerrdBaait/App_Depo/assets/108156235/fe64c3cc-4dd6-444b-b5fb-02712bdfb2d3)" alt="Not found" widht=75%> 
+<img src="https://github.com/BuzzerrdBaait/App_Depo/assets/108156235/fe64c3cc-4dd6-444b-b5fb-02712bdfb2d3)" alt="Not found" widht=50%> 
 
 <p2>Click 'advanced settings'</p2>
 <br></br>
 
-<img src="https://github.com/BuzzerrdBaait/App_Depo/assets/108156235/cba593bd-7bf3-40ea-9c0a-06535e1cc33a" alt="Not found" width=75%>
+<img src="https://github.com/BuzzerrdBaait/App_Depo/assets/108156235/cba593bd-7bf3-40ea-9c0a-06535e1cc33a" alt="Not found" width=50%>
 
 
 
