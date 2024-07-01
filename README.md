@@ -28,6 +28,8 @@
   <li>git installed</li>
   <li>python</li>
   <li>mysql or choose your own database</li>
+
+  
 <p1>First thing, create your virtual environment</p1>
 <br></br>
 <p2>Open cmd line and cd into the directory you would like to store your virtual environment</p2>
