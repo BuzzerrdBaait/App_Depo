@@ -46,7 +46,7 @@ python -m venv App_Depo
 
 <img src="https://github.com/BuzzerrdBaait/App_Depo/assets/108156235/4e1a70bd-4dd0-499e-9a18-2c62c8e9021b" alt="not found" width=90%>
 
-<p1> cd into your virtual environment and activate it.</p1>
+<p1> 2. cd into your virtual environment and activate it.</p1>
 
 ```sh
 cd App_Depo
@@ -55,14 +55,15 @@ cd App_Depo
 ```sh
 cd scripts
 ```
+<p2> Then activate your virtual environment</p2>
+
 | cmd line  |powershell.ps1| 
 |-----------|--------------|
 | activate.bat|./activate.bat|
 
-<p2> Activate your virtual environment.</p2>
-
-
 ```sh
+activate.bat
+```
 
 
 git clone https://github.com/BuzzerrdBaait/App_Depo/
