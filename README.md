@@ -21,9 +21,15 @@
 <img src="https://github.com/BuzzerrdBaait/App_Depo/assets/108156235/c6473dcc-4f8a-46c7-bc79-35d7c5bda271" alt="Not Found">
 <img src="https://github.com/BuzzerrdBaait/App_Depo/assets/108156235/4d807850-1383-40a7-b11b-9de3e75932bc" alt="Not Found">
 
-<code>
+<h3>Gettings started</h3>
+<li>What you will need</li>
+  -pip installed
+  -git installed
+  -python
+  -mysql or choose your own database
+<p1>First thing, create your virtual environment</p1>
+
 git clone https://github.com/BuzzerrdBaait/App_Depo/
-</code>
 
 
 
