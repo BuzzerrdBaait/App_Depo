@@ -65,5 +65,12 @@ cd scripts
 activate.bat
 ```
 
+<p1>3. Clone the repository</p1>
 
+'''sh
 git clone https://github.com/BuzzerrdBaait/App_Depo/
+```
+
+<p1>4. cd into the new app and install requirements.txt<p1>
+```
+cd App_Depo
