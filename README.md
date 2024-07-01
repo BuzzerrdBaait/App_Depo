@@ -32,8 +32,7 @@ git add .
 
 git commit -m "Your commit message"
 
-git push origin new-branch-name
-```
+```git push origin new-branch-name
 
     </div>
 
