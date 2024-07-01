@@ -29,13 +29,13 @@
   <li>mysql or choose your own database</li>
 <p1>First thing, create your virtual environment</p1>
 <p2>Open cmd line and cd into the directory you would like to store your virtual environment</p2>
-```
+```sh
 cd desktop
 <p2>Create your virtual environment, this takes a few seconds.</p2>
-```
+```sh
 python -m venv App_Depo
 <p2>cd into your new app</p2>
-```
+```sh
 cd App_Depo
 
 git clone https://github.com/BuzzerrdBaait/App_Depo/
