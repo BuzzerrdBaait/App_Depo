@@ -29,6 +29,13 @@
   <li>python</li>
   <li>mysql or choose your own database</li>
 <br></br>
+
+
+<br></br>
+<p1>_.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-.</p1>
+<br></br>
+
+
 <p1> 1. First thing, create your virtual environment</p1>
 <br></br>
 <p2>Open cmd line and cd into the directory you would like to store your virtual environment</p2>
@@ -46,7 +53,16 @@ python -m venv App_Depo
 
 <img src="https://github.com/BuzzerrdBaait/App_Depo/assets/108156235/4e1a70bd-4dd0-499e-9a18-2c62c8e9021b" alt="not found" width=65%>
 
+
+
+<br></br>
+<p1>_.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-.</p1>
+<br></br>
+
+
+
 <p1> 2. cd into your virtual environment and activate it.</p1>
+
 
 ```sh
 cd App_Depo
@@ -65,6 +81,12 @@ cd scripts
 activate.bat
 ```
 
+
+
+<br></br>
+<p1>_.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-.</p1>
+<br></br>
+
 <p1>3. Clone the repository</p1>
 
 
@@ -72,28 +94,115 @@ activate.bat
 git clone https://github.com/BuzzerrdBaait/App_Depo/
 ```
 
+
+<br></br>
+<p1>_.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-.</p1>
+<br></br>
+
+
 <p1>4. cd into the new app and install requirements.txt<p1>
 
 
-```
+
+<br></br>
+<p1>_.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-.</p1>
+<br></br>
+
+
+
+```sh
 cd App_Depo
 ```
 
 
-```
+```sh
 pip install -r requirements.txt
 ```
+
+
+
+<br></br>
+<p1>_.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-.</p1>
+<br></br>
+
 
 <p1>5. Create your secret key. Store it in the system environment variables</p1>
 
 <p2>Open the system search and type "Edit system environment variables"</p2>
 
 <br></br>
-<img src="https://github.com/BuzzerrdBaait/App_Depo/assets/108156235/fe64c3cc-4dd6-444b-b5fb-02712bdfb2d3)" alt="Not found" widht=40%> 
+<img src="https://github.com/BuzzerrdBaait/App_Depo/assets/108156235/fe64c3cc-4dd6-444b-b5fb-02712bdfb2d3)" alt="Not found" width=65%> 
 
 <p2>Click 'Environment Variables'</p2>
 
-<img src="https://github.com/BuzzerrdBaait/App_Depo/assets/108156235/cba593bd-7bf3-40ea-9c0a-06535e1cc33a" alt="Not found" width=50%>
+<img src="https://github.com/BuzzerrdBaait/App_Depo/assets/108156235/cba593bd-7bf3-40ea-9c0a-06535e1cc33a" alt="Not found" width=65%>
+
+<p2>click 'New'</p2>
+
+<img src="https://github.com/BuzzerrdBaait/App_Depo/assets/108156235/e09d55fe-315a-43e9-b42b-f8a5a4087677" alt="Not found" width=65%>
+
+<p2>Create your new variable like this.</p2>
+
+<p3> DJANGO_SECRET can be any random string, just make sure it is like 20 characters long for good practices. <p3>
+
+<img src="https://github.com/BuzzerrdBaait/App_Depo/assets/108156235/c4636ed2-276e-4de3-8c23-e8cb97578373" alt="not found" width=65%>
+
+<p2>Press 'Ok' to save the new variable</p2>
+
+<img src="https://github.com/BuzzerrdBaait/App_Depo/assets/108156235/3bc96557-a53b-42ef-971f-cd1d87cfc3c5" alt="not found" width=65%>
+
+<br></br>
+<p1>_.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-._.-.</p1>
+<br></br>
+<p1>6. Open 'cmd' line and migrate</p1>
+
+<p2>if you are not in the directory containing manage.py, cd into your project's root directory</p2>
+
+
+```sh
+py manage.py migrate
+```
+
+<p1>7. You should be ready to runserver now</p1>
+
+```sh
+py manage.py runserver
+```
+
+<p2> hold ctrl + left click the ip adress here </p2>
+
+<img src="https://github.com/BuzzerrdBaait/App_Depo/assets/108156235/3ffa5b38-c73b-4980-ad3b-e4e62b08f743" alt="not found" alt="not found">
+
+
+<p2>This should open up a rather bare home page</p2>
+
+<img src="https://github.com/BuzzerrdBaait/App_Depo/assets/108156235/b5b70220-e499-4741-ae29-e72da65fc4e2" alt="Not found">
+
+
+<h1>Wooooohoooooo!</h1>
+<p1>You are now running the app with an SQLite Database.</p1>
+<p2>It is important to set up you database to maintain persistance amongst multiple sessions</p2>
+
+<p1>I will be adding more documentation to help users get comfortable with the layout</p1>
+<h1>Thanks for reading!!!</h1>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
