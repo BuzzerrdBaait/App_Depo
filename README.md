@@ -1,34 +1,3 @@
-    <style>
-
-        .cmd-box {
-
-            background-color: #1e1e1e;
-
-            color: #c5c5c5;
-
-            font-family: Consolas, monospace;
-
-            padding: 10px;
-
-            border-radius: 5px;
-
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-
-            overflow-x: auto;
-
-        }
-
-        .cmd-box::before {
-
-            content: "$ ";
-
-            color: #6a9955;
-
-        }
-
-    </style>
-
-
 <h1>App Depo</h1>
 
 <h3>Task and Purpose:</h3><p1>To deploy and continue building reusable Django apps. To share Django knowledge for the love of programming!</p1>
@@ -54,10 +23,7 @@
 
 
 
-    <div class="cmd-box">
-
-        <pre><code>git clone https://github.com/username/repository.git
-
+```
 cd repository
 
 git checkout -b new-branch-name
@@ -67,8 +33,7 @@ git add .
 git commit -m "Your commit message"
 
 git push origin new-branch-name
-
-</code></pre>
+```
 
     </div>
 
