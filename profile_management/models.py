@@ -12,6 +12,8 @@ class User_Profile(AbstractUser):
     """
     email=models.CharField(max_length=40, blank=True, null=True, unique=True)
 
+    ilovecookbooks_profile_pic=models.ImageField(upload_to='ilovecookbooks_profile_images',default="none")
+
     authentication_key= models.CharField(max_length=50, unique=True)
 
     is_verified = models.CharField(max_length=1, default='N')

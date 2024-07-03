@@ -39,6 +39,8 @@
 
         <div class="flexbox-item flexbox-item-2"><a href="{% url 'ilovecookbooks:links' %}">Book Links</a></div>
 
+        <div class="flexbox-item flexbox-item-1"><a href="{% url 'home_page:home' %}">App Depo</a></div>
+
 
         {% if user.is_authenticated %}
 
@@ -92,7 +94,7 @@
 
         <div class="flexbox-container3">
 
-            {% if book in recent%}
+
 
             {% for book in recent %}
 
@@ -124,7 +126,7 @@
 
             {% endfor %}
 
-            {%endif%}
+
 
         </div>
 

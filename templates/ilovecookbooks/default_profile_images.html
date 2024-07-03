@@ -79,7 +79,7 @@
 
     <h1>Change Profile Picture</h1>
 
-    <img src="{{ user.user_pic.image.url}}" alt="User Profile Picture">
+    <img src="{{ user.ilovecookbooks_profile_pic.url}}" alt="User Profile Picture">
 
     <form method="post" enctype="multipart/form-data">
 
@@ -103,7 +103,7 @@
 
                 <img src="{{ pic.image.url }}" alt="{{ pic.name }}">
 
-                <form method="post" action="{% url 'ilovecookbooks:default_profile_images' %}">
+                <form method="post" action="{% url 'ilovecookbooks:default_profile_images' pk=user_profile.pk %}">
 
                     {% csrf_token %}
 

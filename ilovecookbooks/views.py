@@ -161,16 +161,6 @@ def search_results(request):
     return render(request, 'search_results.html', context)
 
 
-from django.shortcuts import render, redirect
-
-from django.http import HttpResponseRedirect
-
-from django.contrib.auth import get_user_model
-
-from .models import UserBook
-
-from .forms import DeleteUserBookForm, UserBookForm
-
 
 
 def UserProfileView(request, pk):
@@ -179,17 +169,13 @@ def UserProfileView(request, pk):
 
     user_profile = user_model.objects.get(pk=pk)
 
-    
-
+    user_image_url= user_profile.ilovecookbooks_profile_pic.url
 
     user_books = UserBook.objects.filter(user=user_profile)
-
-
 
     delete_form = DeleteUserBookForm(request.user, request.POST if request.method == 'POST' else None)
 
     create_form = UserBookForm()
-
 
 
     if request.method == 'POST':
@@ -220,11 +206,16 @@ def UserProfileView(request, pk):
 
                 user_book = UserBook.objects.filter(user=request.user, id=user_book_id).first()
 
+                user_book.delete()
+
+                return HttpResponseRedirect(request.path_info)
+
                 # Handle delete action (e.g., user_book.delete())
 
 
 
     context = {
+        'profile_image':user_image_url,
 
         'user_profile': user_profile,
 
@@ -356,7 +347,7 @@ def default_profile_images(request,pk):
 
                 default_pic = DefaultUserProfilePicture.objects.get(pk=default_pic_id)
 
-                user_profile.user_pic = default_pic.image
+                user_profile.ilovecookbooks_profile_pic = default_pic.image
 
                 user_profile.save()
 
@@ -366,11 +357,11 @@ def default_profile_images(request,pk):
 
                     print("USER PICTURE UPLOADED")
 
-                    user_profile.user_pic = form.cleaned_data['user_pic']
+                    user_profile.ilovecookbooks_profile_pic = form.cleaned_data['user_pic']
 
                     user_profile.save()
 
-            return redirect('ilovecookbooks:default_profile_images.html')
+            return redirect('ilovecookbooks:default_profile_images', pk=user_profile.pk)
 
     else:
 

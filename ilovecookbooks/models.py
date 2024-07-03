@@ -218,11 +218,10 @@ class DefaultUserProfilePicture(models.Model):
 
     image = models.ImageField(upload_to='default_profile_pics/')
 
-
-
     def __str__(self):
 
         return self.name
+    
 
 
 
