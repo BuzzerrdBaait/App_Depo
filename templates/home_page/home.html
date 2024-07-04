@@ -13,7 +13,7 @@
             position: relative;
             width: 100%;
             /* max-width: 400px; */ /* Remove max-width to allow grid columns to determine width */
-            background-color: rgba(255, 255, 255, 0.9);
+            background-color: #ffffff00;
             border-radius: 8px;
             overflow: hidden; /* Ensure rounded corners apply correctly */
         }
@@ -99,34 +99,18 @@
             </div>
             <!-- End of image container block -->
             
-            <!-- Repeat similar blocks for other images -->
             <div class="image-container">
                 <div class="image-header">
-                    <h2>{{ ilovecookbooks.name }}</h2>
+                    <h2>{{ flashcards.name }}</h2>
                 </div>
-                <a href="{% url 'ilovecookbooks:Main' %}">
-                    <img src="{{ ilovecookbooks.image.url }}" alt="ilovecookbooks" class="mb-4 w-full rounded-lg shadow-lg">
+                <a href="{% url 'fcapp:flashcards_home' %}">
+                    <img src="{{ flashcards.image.url }}" alt="ilovecookbooks" class="mb-4 w-full rounded-lg shadow-lg">
                 </a>
                 <div class="image-overlay">
-                    <div class="overlay-text">A cookbook library with the ability to save pages and make custom cookbooks.</div>
+                    <div class="overlay-text">An app to make and share flashcards.</div>
                 </div>
             </div>
-            <!-- End of image container block -->
             
-            <div class="image-container">
-                <div class="image-header">
-                    <h2>{{ ilovecookbooks.name }}</h2>
-                </div>
-                <a href="{% url 'ilovecookbooks:Main' %}">
-                    <img src="{{ ilovecookbooks.image.url }}" alt="ilovecookbooks" class="mb-4 w-full rounded-lg shadow-lg">
-                </a>
-                <div class="image-overlay">
-                    <div class="overlay-text">A cookbook library with the ability to save pages and make custom cookbooks.</div>
-                </div>
-            </div>
-            <!-- End of image container block -->
-            
-            <!-- Add more image containers as needed -->
         </div>
     </div>
 </body>

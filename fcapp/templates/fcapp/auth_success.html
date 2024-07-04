@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    
+    {%load static%}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css.css' %}">
+
+    <title>Authentication Success</title>
+
+</head>
+
+<body>
+
+
+    <div class="text-container">
+
+        <h1>Success!</h1>
+
+    </div>
+    <br><br>
+
+    <div class="main-content">
+
+    <div class="list-container">
+
+        <div class="hero">
+
+    <p>User {{ user_profile.username }} has been successfully authenticated. You can now create flashcards and share them with the world!</p>
+
+    <br>
+
+    <p> Go login, then visit your profile and make an new deck.</p>
+</div>
+
+</div>
+
+</div>
+
+<div class="main-content">
+
+    <nav>
+
+      <div class="row">
+
+        <a href="{% url 'login' %}">login</a>
+
+      </div>
+</nav>
+</body>
+
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'css.css' %}">
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <div class="text-container">
+
+        <h1>{{user}}</h1>
+
+    </div>
+
+</head>
+
+<body>
+
+    {% if user == request.user %}
+
+    <div class="main-content">
+
+        <nav>
+    
+          <div class="row">
+    
+            <a href="{% url 'logout'%}">Log out</a>
+    
+          </div>
+    
+          <div class="row">
+    
+            <a href="{% url 'home' %}">Home</a>
+    
+            <a href="{% url 'contact' %}">Contact</a>
+    
+          </div>
+    
+          <div class="row">
+    
+            <a href="{% url 'create_deck'%}">New Deck</a>
+    
+          </div>
+    
+        </nav>
+
+    {%endif%}
+
+    {% if request.user.is_authenticated %}
+
+    {% if user != request.user %}
+
+    <div class="main-content">
+
+        <nav>
+    
+          <div class="row">
+    
+            <a href="{% url 'logout'%}">Log out</a>
+    
+          </div>
+    
+          <div class="row">
+    
+            <a href="{% url 'home' %}">Home</a>
+    
+            <a href="{% url 'contact' %}">Contact</a>
+    
+          </div>
+    
+          <div class="row">
+    
+            <a href="{% url 'user_profile' request.user.pk %}">Your Profile</a>
+    
+          </div>
+    
+        </nav>
+
+    {%endif%}
+
+    {%endif%}
+
+
+
+ 
+
+
+    <div class="grid-container">
+    {% for deck in user_decks %}
+
+    <div class="grid-item">
+
+        <p>{{deck.category}}</p>
+
+        <ul>
+
+
+        <li>
+
+            {% if user == request.user %}
+
+            <a href="{% url 'edit_deck' deck.id%}">edit➯</a>
+
+            {%endif%}
+            
+            <a href="{% url 'view_deck' deck.id %}">{{ deck.title     }}</a>
+
+
+
+
+        </li>
+        </ul>
+        </div>
+
+    {% endfor %}
+    </div>
+
+
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
+    
+<script src="{% static 'javascript.js' %}"></script>
+
+</html>
+
+
+
+

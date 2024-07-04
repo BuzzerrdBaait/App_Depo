@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    {%load static%}
+
+
+
+    <style>
+
+          body {
+
+               background-image:url("https://d17usxoyp786nd.cloudfront.net/{{ img1.image }}");
+               background-size: cover;
+              
+               background-position: center;
+               
+
+          }
+
+
+
+          .main-content {
+
+              padding: 50px;
+
+              text-align: center;
+
+
+              }
+
+
+
+            nav {
+
+            margin-top: 30px;
+
+            
+
+            }
+
+
+            .row {
+
+              display: flex;
+
+
+
+              justify-content: center;
+
+              margin-bottom: 20px;
+
+              }
+
+
+
+              .row a {
+
+              display: inline-block;
+
+              text-decoration: none;
+
+              font-size: x-large;
+
+              color: #333;
+
+              margin: 0 10px;
+
+              padding: 10px 20px;
+
+              margin-bottom: 30px;
+
+              border: 2px solid #333;
+
+              box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.5);
+
+              border-radius: 50px;
+
+              background-image: linear-gradient(to right, #ff8a00, #e52e71);
+
+
+              }
+
+
+
+              .row a:hover {
+
+              background-image: linear-gradient(to right, #e52e71, #ff8a00);
+
+              box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+
+              transition: scale(.5);
+
+
+              color: #fff;
+
+              }
+
+
+              .text-container {
+
+              display: inline-block;
+
+              background-color: #dfdfdf;
+
+              width: 100%;
+
+              text-align: center;
+
+              box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.5);
+
+              }
+
+
+              h1 {
+
+              background-image: linear-gradient(to right, #ff8a00, #e52e71);
+
+              -webkit-background-clip: text;
+
+              color: transparent;
+
+              font-size: 75px;
+
+              font-weight: bolder;
+
+              font-style:italic;
+
+              font-stretch: expanded;
+
+              font-family: 'Market Felt', sans-serif;;
+
+              display: flex;
+
+              justify-content: center;
+
+              text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5);
+
+              }
+
+              .hero {
+
+                text-align: center;
+
+
+                padding: 25px 20px;
+
+                }
+
+
+
+
+                
+              .list-container {
+
+                display: inline-block;
+
+                background-color: #dfdfdf;
+
+                width: fit-content;
+
+                text-align: center;
+
+                padding-left:15px;
+
+                padding-right:15px;
+
+
+                box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.5);
+
+                }
+
+                ul {
+
+                text-align: center;
+
+                padding-left: 0;
+
+                list-style: none;
+
+                }
+
+
+
+                li {
+
+                text-align: left;
+
+                padding-left: 30px; 
+
+                position: relative;
+
+                margin-bottom: 10px;
+
+                }
+
+
+
+                li::before {
+
+                content: "★";
+
+                position: absolute;
+
+                left: 0;
+
+                transform: translateX(-50%);
+
+                }
+
+
+
+                .logoimg{
+
+
+                  background-image:url("https://d17usxoyp786nd.cloudfront.net/{{ img2.image }}");
+
+
+                }
+
+                .flexbox{
+
+                  display:flex;
+
+                }
+
+
+
+
+
+
+
+
+    </style>
+
+      
+          <style>
+      
+
+              #total {
+      
+                  font-size: 24px;
+      
+                  margin-bottom: 10px;
+      
+                  color: #333;
+      
+              }
+      
+      
+      
+              button {
+      
+                  font-size: 18px;
+      
+                  margin: 5px;
+      
+                  padding: 8px 15px;
+      
+                  background-color: #4CAF50;
+      
+                  color: #fff;
+      
+                  border: none;
+      
+                  cursor: pointer;
+      
+                  border-radius: 5px;
+      
+              }
+      
+      
+      
+              button:hover {
+      
+                  background-color: #45a049;
+      
+              }
+      
+      
+      
+              label {
+      
+                  font-size: 16px;
+      
+                  color: #555;
+      
+              }
+      
+      
+      
+          </style>
+      
+      </head>
+      
+      <body>
+
+
+        
+
+<div class="text-container">
+
+  <h1>Web build request</h1>
+
+</div>
+
+
+<body>
+
+
+
+<div class="main-content">
+
+  <nav>
+
+    <div class="row">
+
+    </div>
+
+    <div class="row">
+
+      <a href="{% url 'contact'%}">Contact</a>
+
+    </div>
+
+    <div class="row">
+
+
+    </div>
+
+  </nav>
+
+
+
+  
+  <div class="list-container">
+
+    <div class="hero">
+
+        <h2>Benefits of a custom website</h2>
+
+        <ul>
+  
+        <li><p>You aren't </p></li>
+
+        <li><p> Create and share, then watch knowledge stick!</p></li>
+
+        <li><p>get started today!</p></li>
+  
+        <a href="{% url 'contact' %}" class="call-to-action">Contact</a>
+
+        </ul>
+
+        </div>
+
+    </div>
+   
+    </div>
+
+
+          <h1>Custom Websites</h1>
+
+      
+          <div id="total">Total: $0</div>
+      
+      
+      
+          <!-- Buttons for incrementing and decrementing the total -->
+      
+          <label>Custom Django Pages ($100): </label>
+      
+          <button onclick="updateTotal(100)">Add Pages</button>
+      
+          <button onclick="updateTotal(-100)">Subtract Pages</button>
+      
+      
+      
+          <br>
+      
+      
+      
+          <label>Company Email Setup ($120): </label>
+      
+          <button onclick="updateTotal(120)">Add Email Setup</button>
+      
+          <button onclick="updateTotal(-120)">Subtract Email Setup</button>
+      
+      
+      
+          <br>
+      
+      
+      
+          <label>General Forms ($80): </label>
+      
+          <button onclick="updateTotal(80)">Add General Forms</button>
+      
+          <button onclick="updateTotal(-80)">Subtract General Forms</button>
+      
+      
+      
+          <br>
+      
+      
+      
+          <label>Job Application Form ($150): </label>
+      
+          <button onclick="updateTotal(150)">Add Job Application Form</button>
+      
+          <button onclick="updateTotal(-150)">Subtract Job Application Form</button>
+      
+      
+      
+          <br>
+      
+      
+      
+          <label>S3 Integration (File Uploads) ($200): </label>
+      
+          <button onclick="updateTotal(200)">Add S3 Integration</button>
+      
+          <button onclick="updateTotal(-200)">Subtract S3 Integration</button>
+      
+      
+      
+          <script>
+      
+              let total = 0;
+      
+              let registrationAdded = false;
+      
+      
+      
+              function updateTotal(value, isOneTime) {
+      
+                  if (isOneTime && registrationAdded && value > 0) {
+      
+                      alert("User Registration can only be added once!");
+      
+                      return;
+      
+                  }
+      
+      
+      
+                  total += value;
+      
+                  document.getElementById('total').innerText = 'Total: $' + total.toFixed(2);
+      
+      
+      
+                  if (isOneTime && value > 0) {
+      
+                      registrationAdded = true;
+      
+                  }
+      
+              }
+      
+          </script>
+      
+      
+ 
+
+      <img src="https://d17usxoyp786nd.cloudfront.net/{{ img2.image }}" alt="sorry logo didnt load">
+
+
+
+
+  </body>
+  </html>
+
+ 

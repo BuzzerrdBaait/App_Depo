@@ -22,6 +22,8 @@ def home(request):
 
      ilovecookbooks_logo=logos[0]
 
+     flashcards=logos[1]
+
 
      greeting="The daily message is: 'Love conquers all!'"
 
@@ -30,6 +32,7 @@ def home(request):
           'greeting': greeting,
           'misc_imgs':misc_imgs,
           'ilovecookbooks':ilovecookbooks_logo,
+          'flashcards' : flashcards,
           })
 
 

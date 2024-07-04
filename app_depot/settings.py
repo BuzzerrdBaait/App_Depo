@@ -130,6 +130,7 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
+    'fcapp',
     'ilovecookbooks',
     'home_page',
     'profile_management',
@@ -164,6 +165,7 @@ TEMPLATES = [
              os.path.join(BASE_DIR,'templates','profile_management'),
              os.path.join(BASE_DIR,'templates','experimental_playground'),
              os.path.join(BASE_DIR,'templates','ilovecookbooks'),
+             os.path.join(BASE_DIR,'templates','flashcards'),
         ],
 
         'APP_DIRS': True,

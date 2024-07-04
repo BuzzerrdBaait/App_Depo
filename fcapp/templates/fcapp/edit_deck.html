@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% load static %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'edit_deck.css' %}">
+
+    <title>Edit_Deck</title>
+
+    
+    <div class="text-container">
+
+        <h1>Edit Deck</h1>
+
+    </div>
+
+</head>
+
+<body>
+
+    <div class="main-content">
+
+        <nav>
+    
+          <div class="row">
+            <a href="{% url 'user_profile' request.user.pk %}">Your Profile</a>
+            <a href="{% url 'home' %}">Home</a>
+          </div>
+
+        </nav>
+
+
+        <form method="post">
+
+            {% csrf_token %}
+
+            {{ form.as_p }}
+
+            <button type="submit" class="save_changes">Save Changes</button>
+
+        </form>
+
+
+
+        <form method="post">
+
+            {% csrf_token %}
+
+            {{ delete_deck_form.as_p }}
+
+            <button type="submit" class="delete_button">Delete Deck</button>
+
+        </form>
+
+
+</body>
+</html>

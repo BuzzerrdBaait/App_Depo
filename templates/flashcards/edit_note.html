@@ -1,0 +1,26 @@
+
+{%load static%}
+<link rel="stylesheet" type="text/css" href="{% static 'flashcards/css.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'flashcards/add_note.css' %}">
+
+
+<div class="text-container">
+ 
+     <h1>Edit Note</h1>
+
+ </div>
+
+
+<div class="main-content">
+
+<form method="post">
+
+    {% csrf_token %}
+
+    {{ form.as_p }}
+
+    <button type="submit">Save Changes</button>
+
+</form>
+
+</div>

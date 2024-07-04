@@ -1,0 +1,103 @@
+
+form {
+
+     margin: 20px 0;
+     
+     }
+     
+     form label {
+        display: flex;
+
+        justify-content: center;
+   
+        align-items: center;
+        
+        margin-bottom: 5px;
+   
+        font-size: large;
+        
+        color: #373737;
+        
+     
+     }
+
+
+     
+     
+     form textarea{
+
+     font-size: large;
+
+     font-family:'Market Felt', sans-serif;
+     
+     width: 98%;
+
+     
+
+     min-width: 400px;
+     
+     padding: 10px;
+     
+     margin-bottom: 15px;
+     
+     box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.5);
+     
+     border: 5px solid transparent; 
+     
+     border-image: linear-gradient(to right, #ff7e5f, #ffffff, #e52e71);
+     
+     border-image-slice: 1;
+     
+     border-radius: 5px;
+     
+     box-sizing: border-box;
+     
+     }
+
+     
+    
+     
+     form button {
+     
+     background-color: #4CAF50;
+     
+     color: white;
+     
+     box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.5);
+     
+     padding: 10px 15px;
+     
+     border: none;
+     
+     cursor: pointer;
+     
+     border-radius: 5px;
+     
+     }
+     
+     form button:hover{
+     
+         background-color: #429144;
+     
+         color: rgb(232, 230, 230);
+     
+         box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+     
+         transition: scale(.5);
+     
+     
+         color: #fff;
+     }
+     
+     
+     
+
+     
+     form label {
+     
+         text-align: left;
+     
+     }
+
+     
+

@@ -1,0 +1,343 @@
+.card-container {
+
+     perspective: 1000px;
+     
+     width:100%;
+     
+     height: 600px;
+     
+     display: inline-block;
+     
+     
+     
+     }
+     
+     
+     .card-inner {
+     
+     width: 75%;
+     
+     height: 75%;
+     
+     border-radius: 5%;
+     
+     margin:0 auto;
+     
+     transform-style: preserve-3d;
+     
+     transition: transform 0.5s;
+     
+     box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.5);
+     
+     }
+     
+     
+     
+     .card-container.flipped .card-inner {
+     
+     transform: rotateY(180deg);
+     
+     }
+     
+     
+     
+     .card-front,
+     
+     .card-back {
+     
+     width: 100%;
+     
+     height: 100%;
+     
+     position: absolute;
+     
+     backface-visibility: hidden;
+     
+     display: flex;
+     
+     justify-content: center;
+     
+     align-items: center;
+     
+     font-size: 20px;
+     
+     color: #000000;
+     
+     border-radius: 5%;
+     
+     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+     overflow:auto;
+
+     
+     
+     
+     }
+     
+     .navmenu{
+     
+       padding:20px;
+     }
+     
+     
+     
+     .card-front {
+     
+     background-image: url("https://d17usxoyp786nd.cloudfront.net/{{ flashcard.image }}");
+     
+     border-radius: 5%;
+     
+     
+     }
+     
+     
+     
+     .card-back {
+     
+       border-radius: 5%;
+       background-image:url("https://d17usxoyp786nd.cloudfront.net/{{ back.image }}");
+     
+     transform: rotateY(180deg);
+     
+     
+     
+     }
+     
+     p.question,p.answer{
+     
+     white-space: pre-line;
+     
+     font-family: 'Market Felt', sans-serif;
+     font-size: larger;
+     font-weight: bold;
+     color: #000000d2;
+     
+     line-height: 1.3;
+     
+     word-wrap: break-word;
+
+     padding-top: 50px;
+     
+     overflow: hidden;
+     }
+     
+     
+     .card-position{
+     
+       margin:0, auto;
+       align-items: center;
+     
+       display:flex;
+     
+     }
+     
+     
+     .navmenu button {
+     
+     padding: 10px 15px;
+     
+     display:inline;
+     
+     margin: 5px;
+     
+     border: none;
+     
+     border-radius: 5px;
+     
+     cursor: pointer;
+     
+     font-size: 14px;
+     
+     font-weight: bold;
+     
+     transition: all 0.3s ease;
+     
+     
+     
+     }
+     
+     
+     
+     .navmenu button:nth-child(1) {
+     
+     background-color: #ff880000;
+     
+     
+     }
+     
+     
+     
+     .navmenu button:nth-child(2) {
+     
+     background-color: rgba(188, 145, 253, 0);
+     
+     border:2px solid rgba(161, 104, 171, 0);
+               color:rgb(255, 255, 255);
+     
+     
+     
+     }
+     
+     
+     
+     .navmenu button:nth-child(3) {
+     
+     
+     background-color: #e52e7100;
+     
+     
+     
+     }
+     
+     .navmenu button.deletebutton{
+     
+         background-color:rgb(232, 6, 6);
+               border:2px solid rgb(177, 4, 4);
+               color:rgb(255, 255, 255);
+               box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.5);
+     }
+
+
+     .navmenu button:hover {
+     
+     transform: scale(0.95);
+     
+     box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.2);
+     
+     
+     }
+         
+     
+
+     .edit-link {
+
+      display: inline-block;
+
+      padding: 8px 16px;
+
+      background-color: #ffc107;
+
+      color: #212529; 
+
+      text-decoration: none;
+
+      border: 2px solid #dea806; 
+
+      border-radius: 5px; 
+
+      transition: all 0.3s ease-in-out; 
+
+      box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.5);
+
+  }
+
+
+
+  .edit-link:hover {
+
+      border: 2px solid #ffc107; 
+
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+
+      transform: scale(0.95); 
+
+  }
+
+
+
+
+  .center-content {
+
+      text-align: center;
+
+      margin-top: 200px;
+
+
+      padding: 25px 20px;
+
+      }
+
+  .center-notes{
+
+      
+      text-align: center;
+
+
+      padding: 25px 20px;
+
+
+  }
+
+  .note-container {
+
+      display: inline-block;
+
+      background-color: #dfdfdf;
+
+      width: 95%;
+      max-width: 95%;
+
+      text-align: center;
+
+      padding-left:15px;
+
+      padding-right:15px;
+
+      word-wrap: break-word;
+
+      overflow: hidden;
+
+
+      box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.5);
+
+      }
+
+      .note-container p{
+
+          width: fit-content;
+
+          text-align: left;
+      }
+
+.notes-style{
+
+
+  font-size: 25px;
+  font-style: italic;
+  font-family:'Market Felt', sans-serif;
+  width: fit-content;
+
+  max-width: 95%;
+
+  min-width: 25%;
+  border-radius: 5px 5px 5px 5px;
+
+  box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.5);
+
+  padding:5px;
+  background-color: #bfbebe;
+
+
+
+  white-space: pre-line;
+  
+  line-height: 1.3;
+  
+  word-wrap: break-word;
+  
+  overflow: hidden;
+}
+
+
+.notes-style:hover{
+
+
+
+  background-color: #ffffff;
+}
+
+
+      
+
+
+

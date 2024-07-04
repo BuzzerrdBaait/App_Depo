@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+    {% load static %}
+
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css.css' %}">
+
+
+    <div class="text-container">
+
+        <h1>Flashcardzz</h1>
+
+    </div>
+
+
+<body>
+
+    {% if request.user.is_authenticated %}
+
+
+    <div class="main-content">
+
+        <nav>
+    
+          <div class="row">
+    
+            <a href="{% url 'logout'%}">Log out</a>
+    
+          </div>
+    
+          <div class="row">
+    
+            <a href="{% url 'user_profile' request.user.pk %}">Your Profile</a>
+    
+            <a href="{% url 'contact'%}">Contact</a>
+    
+          </div>
+    
+          <div class="row">
+    
+            <a href="{% url 'clep'%}">CLEP</a>
+    
+          </div>
+    
+        </nav>
+
+
+    {% else %}
+
+    <div class="main-content">
+
+        <nav>
+    
+          <div class="row">
+    
+            <a href="{% url 'login' %}">Login</a>
+    
+          </div>
+    
+          <div class="row">
+    
+            <a href="{% url 'about_us'%}">About Us</a>
+    
+            <a href="{% url 'contact'%}">Contact</a>
+    
+          </div>
+    
+          <div class="row">
+    
+            <a href="{% url 'clep'%}">CLEP</a>
+    
+          </div>
+    
+        </nav>
+    
+    {% endif %}
+
+
+
+    {% if request.user.is_authenticated %}
+
+        <div class="hero">
+
+        <p>Thank you for your support!</p>
+            
+        </div>
+    {% else %}
+
+        <div class="list-container">
+
+        <div class="hero">
+
+            <h2>Welcome to our platform!</h2>
+
+            <ul>
+      
+            <li><p>Accelerate your learning with personalized flashcards.</li>
+
+            <li><p> Create and share, then watch knowledge stick!</p></li>
+
+            <li><p>get started today!</p></li>
+      
+            <a href="{% url 'register' %}" class="call-to-action">Create account</a>
+
+            </ul>
+
+            </div>
+
+        </div>
+       
+        </div>
+
+    {%endif%}
+
+
+    
+ 
+    
+    </head>
+    
+    <body>
+    
+        <div class="grid-container">
+    
+            {% for category, decks in public_decks_by_category.items %}
+
+            {% if decks%}
+    
+                <div class="grid-item">
+    
+                    <p>{{ category }}</p>
+    
+                    <ul>
+    
+                        {% for deck in decks %}
+    
+                            <li>
+    
+                                <a href="{% url 'view_deck' deck.id %}">{{ deck.title }}</a>
+    
+                            </li>
+    
+                        {% endfor %}
+    
+                    </ul>
+    
+                </div>
+
+            {%endif%}
+    
+            {% endfor %}
+    
+        </div>
+
+
+      </br></br>
+    
+    
+    
+
+    </body>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/masonry/4.2.2/masonry.pkgd.min.js"></script>
+    
+
+    <script src="{% static 'javascript.js' %}"></script>
+    
+    </html>
+    
+    

@@ -36,7 +36,6 @@ class DeleteUserBookForm(forms.Form):
         self.fields['user_book'].queryset = UserBook.objects.filter(user=user)
 
 
-
     user_book = forms.ModelChoiceField(queryset=UserBook.objects.none(), empty_label=None, label="Select User Book")
 
 class DeleteUserBookPageForm(forms.Form):

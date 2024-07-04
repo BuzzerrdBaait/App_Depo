@@ -216,7 +216,7 @@ class DefaultUserProfilePicture(models.Model):
 
     name = models.CharField(max_length=255, unique=True)
 
-    image = models.ImageField(upload_to='default_profile_pics/')
+    image = models.ImageField(upload_to='flashcards_profile_imgs/')
 
     def __str__(self):
 

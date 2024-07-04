@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+     {%load static%}
+     <link rel="stylesheet" type="text/css" href="{% static 'css.css' %}">
+     <link rel="stylesheet" type="text/css" href="{% static 'add_note.css' %}">
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+</head>
+<body>
+
+
+     <style>
+
+
+
+     </style>
+
+
+     
+          {% block content %}
+
+
+          <div class="text-container">
+
+               <h1>Add Notes to {{ deck.title }}</h1>
+       
+           </div>
+
+        
+
+
+
+          <form method="post" action="{% url 'add_notes' deck.id %}">
+
+          {% csrf_token %}
+
+          {{ form.as_p }}
+
+          <button type="submit">Add Notes</button>
+
+          </form>
+
+
+
+          <a href="{% url 'view_deck' deck.id %}">Back to Deck</a>
+
+          {% endblock %}
+
+</body>
+</html>

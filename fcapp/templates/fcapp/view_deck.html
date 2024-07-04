@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+{% load static %}
+
+
+
+<link rel="stylesheet" type="text/css" href="{% static 'css.css' %}">
+
+
+<link rel="stylesheet" type="text/css" href="{% static 'view_deck.css' %}">
+
+
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>{{ deck.title }}</title>
+
+    <div class="text-container">
+
+        <h1>{{deck.title}}</h1>
+
+    </div>
+
+    <p class="admintag">Made by:{{deck.user}}</p>
+
+</head>
+
+
+
+<body>
+
+    <div class="main-content">
+
+        <nav>
+
+            {% if deck.user == request.user %}
+
+            <div class="row">
+
+                <a href="{% url 'create_card' deck.id %}">Create a New Card</a>
+
+            </div>
+
+            <div class="row">
+
+                <a href="{% url 'home' %}">Go Home</a>
+
+                <a href="{%url 'add_notes' deck.id%}">Add Note</a>
+
+                <a href="{% url 'user_profile' request.user.pk %}">Your Profile</a>
+
+            </div>
+
+            <div class="row">
+
+                <a href="{% url 'edit_deck' deck.id %}">Edit Deck</a>
+
+            </div>
+
+            </nav>
+
+            {% endif %}
+
+
+
+            {% if request.user and request.user != deck.user and not request.user.is_anonymous %}
+
+            <nav>
+
+                <div class="row">
+
+                    <a href="{% url 'home' %}">Go Home</a>
+
+                    <a href="{% url 'user_profile' request.user.pk %}">Your Profile</a>
+
+                </div>
+
+            </nav>
+
+            {% endif %}
+
+
+
+            {% if request.user.is_anonymous %}
+
+            <nav>
+
+                <div class="row">
+
+                    <a href="{% url 'home' %}">Go Home</a>
+
+                </div>
+
+            </nav>
+
+            {% endif %}
+
+
+            <style>
+
+
+
+.card-front {
+
+background-image: url("https://d17usxoyp786nd.cloudfront.net/{{ flashcard.image }}");
+
+border-radius: 5%;
+
+
+}
+
+
+
+.card-back {
+
+  border-radius: 5%;
+  background-image:url("https://d17usxoyp786nd.cloudfront.net/{{ back.image }}");
+
+transform: rotateY(180deg);
+
+}
+    
+          </style>
+
+
+<div class="card-position">
+          
+            {% for card in cards %}
+
+            <div class="card-container" id="card-{{ card.id }}">
+
+              <p>Card {{ forloop.counter}}:</p>
+
+
+
+                    <div class="card-inner">
+
+                        <div class="card-front">
+
+                            
+
+                            <div id="content-{{ card.id }}" class="card-front">
+
+                                <p class="question">{{ card.question }}</p>
+
+                            </div>
+
+                        </div>
+
+                        <div class="card-back">
+
+                            <p class="answer">{{ card.answer }}</p>
+
+                        </div>
+
+                
+
+                </div>
+
+
+
+                <div class="navmenu">
+
+                    <div class="row">
+
+                    <button onclick="showPrevious()"><img src="https://d17usxoyp786nd.cloudfront.net/{{ left.image }}" alt="flip"></button>
+
+                    <button onclick="flipCard({{ card.id }})"><img src="https://d17usxoyp786nd.cloudfront.net/{{ flip_button.image }}" alt="flip"></button>
+
+                    <button onclick="showNext()"><img src="https://d17usxoyp786nd.cloudfront.net/{{ right.image }}" alt="flip"></button>
+
+                    </div>
+
+                    <form method="post" action="{% url 'view_deck' deck.id %}">
+
+                      {% csrf_token %}
+  
+                      <input type="hidden" name="card_id" value="{{ card.id }}">
+  
+                      {% if deck.user == request.user %}
+  
+                      <button type="submit" name="action" value="delete_card" class="deletebutton">Delete Card</button>
+                      
+                      {% endif %}
+
+
+                      
+                        {% if deck.user == request.user %}
+
+                        
+
+                        <a href="{% url 'edit_card' card.id %}" class="edit-link">Edit Card</a>
+        
+                        {% endif %}
+
+
+                </div>
+                   
+
+                </form>
+
+
+
+            </div>
+
+            {% endfor %}
+
+          </div>
+
+          </div>
+
+
+
+
+            <div class="center-content">
+
+
+          <div class="note-container">
+            <h2>Notes:</h2>
+
+        
+            {% for note in notes %}
+            <div class="center-notes">
+               
+            
+            <p>{{ note.date|date:"F d, Y" }}</p>
+
+            <ul>
+        
+            <li><div class="notes-style">{{ note.note }}</div></li>
+        </ul>
+
+        <div class="center-notes">
+
+ 
+            {% if note.user == request.user %}
+
+            
+ 
+                <a href="{% url 'edit_note' note.id %}" class="edit-link">Edit Note</a>
+ 
+            {% endif %}
+ 
+        </div>
+   
+        
+    </div>
+                
+        
+            {% endfor %}
+
+        </div>
+
+        </div>
+
+
+            <script>
+
+                var currentCardIndex = 0;
+
+                var cards = document.querySelectorAll('.card-container');
+
+
+
+                function showCard(index) {
+
+                    cards.forEach(function (card, i) {
+
+                        card.classList.remove('flipped');
+
+                        card.style.display = (i === index) ? 'block' : 'none';
+
+                    });
+
+                }
+
+
+
+                function showNext() {
+
+                    currentCardIndex = (currentCardIndex + 1) % cards.length;
+
+                    showCard(currentCardIndex);
+
+                }
+
+
+
+                function showPrevious() {
+
+                    currentCardIndex = (currentCardIndex - 1 + cards.length) % cards.length;
+
+                    showCard(currentCardIndex);
+
+                }
+
+
+
+                function flipCard(cardId) {
+
+                    var cardContainer = document.getElementById('card-' + cardId);
+
+                    cardContainer.classList.toggle('flipped');
+
+                }
+
+
+                showCard(currentCardIndex);
+
+            </script>
+
+</body>
+
+</html>
+

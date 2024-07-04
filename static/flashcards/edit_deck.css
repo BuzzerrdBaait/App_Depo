@@ -1,0 +1,181 @@
+
+form {
+
+     margin: 20px 0;
+     
+     }
+     
+     form label {
+     
+     display: flex;
+
+     justify-content: center;
+
+     align-items: center;
+     
+     margin-bottom: 5px;
+
+     font-size: large;
+     
+     color: #373737;
+     
+     }
+     
+     form input {
+
+     font-size: large;
+
+     font-family:'Market Felt', sans-serif;
+     
+     width: 35%;
+
+     min-width: 345px;
+
+     padding: 10px;
+     
+     margin-bottom: 15px;
+     
+     border: 5px solid transparent;
+     
+     border-image: linear-gradient(to right, #ff7e5f, #ffffff, #e52e71);
+     
+     border-image-slice: 1;
+     
+     border-radius: 5px;
+     
+     box-sizing: border-box;
+     
+     }
+
+     form input[name="title"]{
+
+          box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.5);
+          
+       }
+     
+     
+     form textarea{
+
+     font-size: large;
+
+     font-family:'Market Felt', sans-serif;
+     
+     width: 38%;
+
+     min-width: 345px;
+
+     padding: 10px;
+     
+     margin-bottom: 15px;
+     
+     box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.5);
+     
+     border: 5px solid transparent; 
+     
+     border-image: linear-gradient(to right, #ff7e5f, #ffffff, #e52e71);
+     
+     border-image-slice: 1;
+     
+     border-radius: 5px;
+     
+     box-sizing: border-box;
+
+     white-space:pre-wrap;
+     
+     }
+     
+     form select {
+
+     font-size: large;
+
+     font-family:'Market Felt', sans-serif;
+     
+     width: 25%;
+     
+     padding: 10px;
+     
+     margin-bottom: 15px;
+     
+     box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.5);
+     
+     border: 5px solid transparent; /* I had to set the border to transparent beause it overlaps the gradient */
+     
+     border-image: linear-gradient(to right, #ff7e5f, #ffffff, #e52e71);
+     
+     border-image-slice: 1;
+     
+     border-radius: 5px;
+     
+     box-sizing: border-box;
+     
+     }
+     
+     
+     form .public-checkbox-container {
+     
+     display: flex;
+     
+     align-items: center;
+     
+     margin-bottom: 15px;
+     
+     }
+     
+     
+     form input[name="public"] {
+     
+         width: 25px; 
+         height: 25px;
+         
+     
+     }
+     
+     
+     form button {
+     
+     background-color: #4CAF50;
+     
+     color: white;
+     
+     box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.5);
+     
+     padding: 10px 15px;
+     
+     border:2px solid #377e3a;
+     
+     cursor: pointer;
+     
+     border-radius: 5px;
+     
+     }
+
+     form button.delete_button{
+
+          background-color:rgb(232, 6, 6);
+          border:2px solid rgb(177, 4, 4);
+     }
+
+     form button.delete_button:hover{
+
+          background-color: rgb(176, 1, 1);
+
+     }
+     
+     form button:hover{
+     
+         background-color: #429144;
+     
+         color: rgb(232, 230, 230);
+     
+         box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+     
+         transition: scale(.5);
+     
+     
+         color: #fff;
+     }
+     
+     
+
+     
+

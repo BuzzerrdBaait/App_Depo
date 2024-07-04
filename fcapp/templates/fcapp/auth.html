@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    {%load static%}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css.css' %}">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'edit_deck.css' %}">
+
+
+    <style>
+        .authenticate-button {
+
+            background-color: #4CAF50;
+
+            color: white;
+
+            box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.5);
+
+            padding: 10px 15px;
+
+            border: 2px solid #377e3a;
+
+            cursor: pointer;
+
+            border-radius: 5px;
+
+            }
+
+
+
+            .authenticate-button:hover {
+
+            background-color: #429144;
+
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+
+            transition: scale(0.5);
+
+            color: #fff;
+
+            }
+
+
+    </style>
+
+    <title>Authentication Form</title>
+
+</head>
+
+<body>
+
+
+
+
+    <div class="text-container">
+
+        <h1>Authentication Form</h1>
+
+    </div>
+
+
+    <div class="main-content">
+
+        <nav>
+    
+          <div class="row">
+    
+            <a href="{% url 'home' %}">Home</a>
+    
+          </div>
+    </nav>
+
+    </div>
+
+
+    <div class="hero">
+
+
+    <form method="post" action="">
+
+        {% csrf_token %}
+
+        {{ form.as_p }}
+
+        <input type="submit" class= "authenticate-button" value="Authenticate">
+
+
+    </form>
+
+</div>
+
+
+
+
+
+
+
+
+</body>
+
+</html>
