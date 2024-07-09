@@ -213,7 +213,7 @@ if is_deployed:
     #COMPRESS_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
     COMPRESS_ENABLED= True
     COMPRESS_URL= CLOUDFRONT_URL
-    DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+    #DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
 
     bucketurl='https://iloverecipes.s3.us-east-2.amazonaws.com'
@@ -241,12 +241,12 @@ if is_deployed:
     SECURE_SSL_REDIRECT = True
 
     
-#    STORAGES = {
- #       
-  #      "staticfiles": {
-   #         "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
-    #    },
-    #}
+    STORAGES = {
+        
+        "staticfiles": {
+            "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+        },
+    }
 
 
 else:
