@@ -12,9 +12,7 @@ from django.conf.urls import *
 from django.urls import path 
 from django.contrib import admin
 
-admin.site.site_header = "Cookbook layer"
 
-admin.site.index_title= "Create books here"
 
 app_name= "ilovecookbooks"
 
