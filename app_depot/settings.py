@@ -239,6 +239,8 @@ if is_deployed:
     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
     SECURE_SSL_REDIRECT = True
 
+    STATIC_ROOT=os.path.join(BASE_DIR,'static')
+
     
     STORAGES = {
         
