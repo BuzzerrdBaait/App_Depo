@@ -138,7 +138,7 @@ INSTALLED_APPS = [
     'home_page',
     'profile_management',
     'experimental_playground',
-    'django.contrib.admin',
+    #'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
