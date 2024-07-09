@@ -195,8 +195,7 @@ logging.info(f"{is_deployed}<-------------is deployed variable found")
 if is_deployed:
 
     logger.info("is_deployed environment variable detected. \n running settings.py with production variables.")
-    django_heroku.settings(locals())
-
+    django_heroku.settings(locals(), staticfiles=False)
            
     AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')            #
     AWS_SECRET_ACCESS_KEY =os.environ.get('AWS_SECRET_ACCESS_KEY')     #
@@ -213,7 +212,7 @@ if is_deployed:
     #COMPRESS_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
     COMPRESS_ENABLED= True
     COMPRESS_URL= CLOUDFRONT_URL
-    #DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+    DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
 
     bucketurl='https://iloverecipes.s3.us-east-2.amazonaws.com'
