@@ -241,7 +241,7 @@ if is_deployed:
     
     STORAGES = {
          "default": {
-        "BACKEND": "django.core.files.storage.FileSystemStorage",
+        "BACKEND": 'storages.backends.s3boto3.S3Boto3Storage',
     },
         
         "staticfiles": {
