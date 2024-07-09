@@ -214,7 +214,7 @@ if is_deployed:
 
     bucketurl='https://iloverecipes.s3.us-east-2.amazonaws.com'
 
-    DEBUG = True
+    DEBUG = False
 
     logging.warning("Debug is FALSE")
 
@@ -240,13 +240,15 @@ if is_deployed:
 
     
     STORAGES = {
+         "default": {
+        "BACKEND": "django.core.files.storage.FileSystemStorage",
+    },
         
         "staticfiles": {
             "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
             
         },
     }
-
 
 else:
 
