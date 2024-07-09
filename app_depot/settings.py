@@ -214,7 +214,7 @@ if is_deployed:
 
     bucketurl='https://iloverecipes.s3.us-east-2.amazonaws.com'
 
-    DEBUG = False
+    DEBUG = True
 
     logging.warning("Debug is FALSE")
 
