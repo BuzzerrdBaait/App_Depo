@@ -240,6 +240,15 @@ if is_deployed:
     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
     SECURE_SSL_REDIRECT = True
 
+    
+#    STORAGES = {
+ #       
+  #      "staticfiles": {
+   #         "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+    #    },
+    #}
+
+
 else:
 
     DEBUG=True
@@ -281,10 +290,3 @@ AUTH_PASSWORD_VALIDATORS = [
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-
-STORAGES = {
-     
-    "staticfiles": {
-        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
-    },
-}
