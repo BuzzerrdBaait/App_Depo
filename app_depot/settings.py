@@ -104,9 +104,6 @@ WSGI_APPLICATION = 'app_depot.wsgi.application'
 
 STATIC_URL='static/'
 
-STATICFILES_DIRS=[
-     os.path.join(BASE_DIR,'static'),
-]
 
 """TIME ZONE"""
 LANGUAGE_CODE = 'en-us'
@@ -254,6 +251,11 @@ if is_deployed:
 else:
 
     DEBUG=True
+
+    STATICFILES_DIRS=[
+     os.path.join(BASE_DIR,'static'),
+    ]
+
 
     logging.warning(f"{DEBUG}<---DEBUG STATUS")
      
