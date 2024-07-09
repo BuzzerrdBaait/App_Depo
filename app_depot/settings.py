@@ -10,6 +10,9 @@ Going to production checklist: https://docs.djangoproject.com/en/5.0/howto/deplo
 from pathlib import Path
 import os
 import logging
+import dj_database_url
+import django_heroku
+import psycopg2
 
 
 """
@@ -155,6 +158,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "django.middleware.security.SecurityMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
 ]
 
 TEMPLATES = [
@@ -181,18 +186,65 @@ TEMPLATES = [
 ]
 
 
+is_deployed=os.environ.get('is_deployed')
+logging.info(f"{is_deployed}<-------------is deployed variable found")
 
-if None in DB_Credentials:
- 
-    logger.warning(" _.-.__.-.__.-.__.-.__.-.__.-.__.-.__.-._\n                                      Database credentials are showing as None.\n                                     Defaulting to SQLite until you configure local variables.\n                                     Your changes will not save across sessions!! \n                                     _.-.__.-.__.-.__.-.__.-.__.-.__.-.__.-._ \n")
- 
+
+
+
+if is_deployed:
+
+    logger.info("is_deployed environment variable detected. \n running settings.py with production variables.")
+    django_heroku.settings(locals())
+
+           
+    AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')            #
+    AWS_SECRET_ACCESS_KEY =os.environ.get('AWS_SECRET_ACCESS_KEY')     #
+    AWS_STORAGE_BUCKET_NAME =os.environ.get('S3_BUCKET')               #        DJANGO_STATIC = True                                               #
+    DJANGO_STATIC_FILE_PROXY = 'cloudfront.file_proxy'                 #
+    CLOUDFRONT_PUB_KEY=os.getenv('CLOUDFRONT_PUB')
+    CLOUDFRONT_SECRET=os.getenv('CLOUDFRONT_SECRET')
+    AWS_DEFAULT_ACL='public-read'                                #
+    CLOUDFRONT_URL = 'https://d17usxoyp786nd.cloudfront.net/' 
+    MEDIA_URL = CLOUDFRONT_URL
+    AWS_S3_CUSTOM_DOMAIN = CLOUDFRONT_URL   
+    DJANGO_STATIC = True
+    DJANGO_STATIC_FILE_PROXY = 'cloudfront.file_proxy'
+    #COMPRESS_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+    COMPRESS_ENABLED= True
+    COMPRESS_URL= CLOUDFRONT_URL
+    DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+
+
+    bucketurl='https://iloverecipes.s3.us-east-2.amazonaws.com'
+
+    DEBUG = False
+
+    logging.warning("Debug is FALSE")
+
+    ALLOWED_HOSTS = ["*",]
+
     DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / "db.sqlite3",
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / "db.sqlite3",
+        }
     }
-}
+    
+             
+    DATABASE_URL = os.environ['DATABASE_URL']
+
+    conn = psycopg2.connect(DATABASE_URL, sslmode='require')
+    DATABASES['default'] = dj_database_url.config(conn_max_age=600, ssl_require=True)
+
+    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+    SECURE_SSL_REDIRECT = True
+
 else:
+
+    DEBUG=True
+
+    logging.warning(f"{DEBUG}<---DEBUG STATUS")
      
     DATABASES = {
     'default' : {
@@ -228,3 +280,11 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+STORAGES = {
+     
+    "staticfiles": {
+        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+    },
+}
