@@ -1,4 +1,4 @@
 
-web: gunicorn app_depo.wsgi
+web: gunicorn app_depot.wsgi
 
 
