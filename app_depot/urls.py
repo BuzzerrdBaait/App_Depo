@@ -16,7 +16,7 @@ urlpatterns=[
 
      path('', include("fcapp.urls")),
 
-   #  path('admin/',admin.site.urls),
+     path('admin/',admin.site.urls),
 
      path('accounts/', include('django.contrib.auth.urls')),
 

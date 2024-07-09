@@ -128,7 +128,7 @@ MEDIA_ROOT= os.path.join(BASE_DIR,'media')
 
 """DONT FORGET TO TURN DEBUG TO FALSE IN PRODUCTION"""
 
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -138,7 +138,7 @@ INSTALLED_APPS = [
     'home_page',
     'profile_management',
     'experimental_playground',
-    #'django.contrib.admin',
+    'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
