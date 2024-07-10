@@ -1,0 +1,2 @@
+psql: warning: extra command-line argument "django_admin_log" ignored
+psql: error: invalid connection option ""

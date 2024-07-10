@@ -156,7 +156,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     "django.middleware.security.SecurityMiddleware",
-    "whitenoise.middleware.WhiteNoiseMiddleware",
+    #"whitenoise.middleware.WhiteNoiseMiddleware",
 ]
 
 TEMPLATES = [
@@ -239,16 +239,7 @@ if is_deployed:
     STATIC_ROOT=os.path.join(BASE_DIR,'static')
 
     
-    STORAGES = {
-         "default": {
-        "BACKEND": 'storages.backends.s3boto3.S3Boto3Storage',
-    },
-        
-        "staticfiles": {
-            "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
-            
-        },
-    }
+
 
 else:
 
