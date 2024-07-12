@@ -2,7 +2,7 @@
 
 <h3>Task and Purpose:</h3><p1>To deploy and continue building reusable Django apps. To share Django knowledge for the love of programming!</p1>
 
-<h3>Welcome</h3><p1>I have been buildling in Django for a little over a year now. I host two web apps currently. www.ilovecookbooks.org and www.flashcardzz.com. So my short term goal is to house both of these under one roof "App Depo".</p1>
+<h3>Welcome</h3><p1>I host two web apps currently. www.ilovecookbooks.org and www.flashcardzz.com. So my short term goal is to house both of these under one roof "App Depo". I want to continue improving these applications but there is a lot I want to build. I'm happy to have other developers join the project as well. I will help you!!</p1>
 
 <h3>Goals</h3>
 <li>Find people who want to develop or learn how to wire in urls,create models,views,forms,ect.</li>
@@ -198,6 +198,12 @@ py manage.py runserver
 <p2>This should open up a rather bare home page</p2>
 
 <img src="https://github.com/BuzzerrdBaait/App_Depo/assets/108156235/b5b70220-e499-4741-ae29-e72da65fc4e2" alt="Not found">
+
+
+<p1>Here is the home page with the images uploaded.</p1>
+
+<img src="https://github.com/user-attachments/assets/12168595-f3e6-409e-872a-955de92da785" alt="not found">
+
 
 
 <h1>Wooooohoooooo!</h1>
